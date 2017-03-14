@@ -1,89 +1,79 @@
-<html>
+<html ng-app="myApp">
     <head>
-        <title>DBK Salary Guide</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
-        <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Oswald:700|Prompt:200,300,400" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/main.js"></script>
+        <title>Diamondback Salary Guide</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
+        <script src="js/app.js"></script>
+        
     </head>
-    
-    <body>
-        <wrapper>
-            <div class="landing center">
-               
-                <header class="header center">
-                    <p><a href="http://www.dbknews.com/">DBK</a></p>
-                    <nav>
-                        <a id="about">About</a>
-                        <a id ="previous">Previous</a>
-                    </nav>
-                </header>
+    <body ng-controller="MainCtlr">
+        <style>
+            h1{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            #nav{
+                border-top:2px black solid;
+                text-align: center;
+            }
+        </style>
+        <h1>DBK</h1>
+        <div id="nav">
+            <button data-toggle="modal" data-target="#aboutModal">About</button>
+            <button>Previous</button>
+        </div>
+        <div ui-view>
+        </div>
+        
+        <div id="aboutModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
                 
-                <div class="content center">
-                    <div class="text">
-                        <p>The Diamondback's 2017</p>
-                        <p class="title">Salary Guide</p>
-                        <p id ="view"><a href="salaryguide.html" target="_blank">view</a></p>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">About (Bacon Ipsum)</h4>
                     </div>
-                    <img src="../sources/umd.jpg" alt="University of Maryland">
-                </div>
-                
-                <footer class="footer center">
-                    <div class="social-links">
-                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-plus" aria-hidden="true"></i></a> 
+                    <div class="modal-body">
+                        <p>
+                            Bacon ipsum dolor amet landjaeger shankle burgdoggen, ham sirloin ball tip corned beef. Pastrami meatloaf burgdoggen picanha doner, ham hock frankfurter brisket tri-tip capicola sirloin. Boudin pork ribeye tongue tenderloin landjaeger meatloaf, ham jowl bacon sausage meatball. Doner ribeye capicola meatball shankle shank beef rump bresaola sirloin pork loin strip steak.
+
+                            Swine alcatra picanha short loin. Shank porchetta bacon flank shoulder short loin. Beef ribs salami turkey jowl pork loin frankfurter chicken. Ribeye bresaola biltong strip steak chicken filet mignon jerky shankle pork beef leberkas pig. Short loin strip steak meatball pastrami kielbasa drumstick doner swine chuck pork chop. Turkey kielbasa kevin venison ball tip pork chop meatball filet mignon shankle sausage leberkas ham hock ham tri-tip beef.
+
+                            Tenderloin kevin landjaeger ground round burgdoggen beef ribs chuck ham hock, andouille kielbasa filet mignon drumstick bacon. Pork belly porchetta leberkas shank capicola cupim. Bacon burgdoggen strip steak, short ribs leberkas ground round pastrami. Pork loin pork chop shank, pork salami short loin landjaeger tri-tip meatball frankfurter shankle pancetta cow ham hock swine. Pastrami ham hock flank boudin porchetta kielbasa sausage venison, pork chop short loin brisket swine. Tail t-bone strip steak, short ribs flank chuck tongue shankle salami rump prosciutto ribeye shank drumstick pork chop.
+                        </p>
                     </div>
-                </footer>
-                
-            </div>
-            
-            <div class="modal center" id="abt-modal">
-                <div class="modal-content center">
-                   <div class="text">
-                       <i class="fa fa-times-circle-o close" id="abt-close" aria-hidden="true"></i>
-                    <h1>About</h1>
-                    <p>
-                        At The Diamondback, we’ve pledged to hold the University of Maryland accountable in our coverage. Our 
-                        <br /> annual salary guide adheres to that mission, laying out each university employee’s yearly pay in an easily 
-                        <br /> digestible format. Here, you can find charts searchable by salary, department, title and other information.
-                        <br />
-                        <br />
-                        Each year, the university provides this public data to The Diamondback in a basic Excel spreadsheet. We’ve 
-                        <br />rendered its contents on the online without tampering; if so inclined, readers could request the same public 
-                        <br />data from the university to receive all of the information presented in this guide.
-                        <br />
-                        <br />
-                        The Diamondback chooses to compile this data year after year as a service to our readers — giving students, 
-                        <br />alumni, employees and others in the university community immediate, comprehensive access. As with all of 
-                        <br />our news coverage, the salary guide maintains The Diamondback’s commitment to objectivity. We won’t tell 
-                        <br />you what conclusions to draw from these numbers, but it’s our hope that they’ll give you every bit of 
-                        <br />information you need to reflect on your own. As always, your takeaways from this information are your own 
-                        <br />— just as they should be.
-                    </p>
-                   </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="modal center" id="prev-modal">
-                <div class="modal-content center">
-                   <div class="text" id="prev-text">
-                        <i class="fa fa-times-circle-o close" id="prev-close" aria-hidden="true"></i>
-                        <h1>Previous Years</h1>
-                        <div class="links center">
-                            <a href="#">2016 Salary Guide</a>
-                            <a href="#">2015 Salary Guide</a>
-                            <a href="#">2014 Salary Guide</a>
-                        </div>
-                   </div>
+        </div>
+        <div id="prevYearModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Previous Years</h4>
+                    </div>
+                    <div class="modal-body">
+                        <li>
+                            <ul>2016 Salary Guide</ul>
+                            <ul>2015 Salary Guide</ul>
+                            <ul>2014 Salary Guide</ul>
+                        </li>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
+
             </div>
-            
-        </wrapper>
+        </div>
     </body>
 </html>
