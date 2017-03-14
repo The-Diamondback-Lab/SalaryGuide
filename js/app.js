@@ -47,26 +47,48 @@ myApp.controller("homeCtlr",["$scope",function($scope) {
     
 }]);
 
-myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON",function($scope,$http,CSVtoJSON) {
-    var csv_data;
+myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
+    var csv_data, display_data;
+    $scope.searchValue = '';
+    var termLength = 0;
     CSVtoJSON.read("data/2017.csv").then(function(data){
         csv_data = data;
-        for(i = 0 ; i < data.length && i < 100; i++) {
-            htmlString = "<tr>" ;
-            htmlString += "<td>" + data[i].name + "</td>";
-            htmlString += "<td>" + data[i].dept + "</td>";
-            htmlString += "<td>" + data[i].div + "</td>";
-            htmlString += "<td>" + data[i].title + "</td>";
-            htmlString += "<td>" + data[i].salary + "</td>";
-            htmlString += "</tr>";
-            document.getElementById("data").innerHTML += htmlString;
-        }
-        console.log(CSVtoJSON.search(data,{div:"A. James Clark School of Engineering"}));
+        display_data = data;
+        renderTable();
+        //console.log(CSVtoJSON.search(data,{div:"A. James Clark School of Engineering"}));
     });
+    $scope.searchProf = function() {
+        //posTest = (termLength - $scope.searchValue.length) > 0;
+        termLength = $scope.searchValue.length;
+        console.log($scope.searchValue)
+        
+        //console.log("hi")
+        display_data = _.filter(csv_data,function(i){
+            return i.name.toLowerCase().includes($scope.searchValue.toLowerCase());
+        });
+        renderTable();
+        
+        
+    }
     
+    function renderTable() {
+        //console.log($scope.searchValue);
+        //console.log("table rendered")
+        htmlString = "<tr><th>Name</th><th>Department</th><th>Division</th><th>Title</th><th>Salary</th></tr>";
+        for(i = 0 ; i < display_data.length && i < 50; i++) {
+            htmlString += "<tr>" ;
+            htmlString += "<td>" + display_data[i].name + "</td>";
+            htmlString += "<td>" + display_data[i].dept + "</td>";
+            htmlString += "<td>" + display_data[i].div + "</td>";
+            htmlString += "<td>" + display_data[i].title + "</td>";
+            htmlString += "<td>" + display_data[i].salary + "</td>";
+            htmlString += "</tr>"; 
+        }
+        document.getElementById("data").innerHTML = htmlString;
+    }
 }]);
 
-myApp.service("CSVtoJSON",["$http","_", function($http,_) {
+myApp.service("CSVtoJSON",["$http", function($http) {
     
     this.read = function(path) {
         return $http.get(path).then(function(data) {
@@ -90,9 +112,6 @@ myApp.service("CSVtoJSON",["$http","_", function($http,_) {
         });
     }
     
-    this.search = function(data,props) {
-        return _.filter(data,props);
-    }
     
 }]);
 

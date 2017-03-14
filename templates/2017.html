@@ -3,7 +3,7 @@
         padding: 5px;
     }
 </style>
-<input type="text" id="search">
+<input placeholder="Search Professor" type="text" id="search" ng-model="searchValue" ng-change="searchProf()">
 <table id="data">
     <tr>
         <th>Name</th>
