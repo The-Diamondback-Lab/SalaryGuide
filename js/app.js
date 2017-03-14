@@ -39,7 +39,7 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             url:"/2017",
             templateUrl:"templates/2017.html",
             controller:"2017Ctlr"
-        })
+        });
         
 });
 
