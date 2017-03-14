@@ -17,6 +17,7 @@ myApp.factory('_', LodashFactory);
 
 myApp.controller("MainCtlr",["$scope","$state",function($scope,$state){
     $scope.go = function(stateName){
+        console.log(stateName)
         $state.go(stateName);
     }
 }]);
@@ -32,13 +33,13 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
         // The home state should be the frontpage of the whole project
         .state('home',{
             url:"/",
-            templateUrl:"templates/home.html",
+            templateUrl:"templates/landing.html",
             controller:"homeCtlr"
         })
-        .state('2017',{
-            url:"/2017",
-            templateUrl:"templates/2017.html",
-            controller:"2017Ctlr"
+        .state('salGuide',{
+            url:"/salGuide",
+            templateUrl:"templates/salguide.html",
+            controller:"salGuideCtlr"
         });
         
 });
@@ -46,8 +47,11 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
 myApp.controller("homeCtlr",["$scope",function($scope) {
     
 }]);
+myApp.controller("salGuideCtlr",["$scope",function($scope) {
+    
+}]);
 
-myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
+/*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
     var csv_data, display_data;
     $scope.searchValue = '';
     var termLength = 0;
@@ -86,9 +90,9 @@ myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$h
         }
         document.getElementById("data").innerHTML = htmlString;
     }
-}]);
+}]);*/
 
-myApp.service("CSVtoJSON",["$http", function($http) {
+/*myApp.service("CSVtoJSON",["$http", function($http) {
     
     this.read = function(path) {
         return $http.get(path).then(function(data) {
@@ -113,5 +117,5 @@ myApp.service("CSVtoJSON",["$http", function($http) {
     }
     
     
-}]);
+}]);*/
 
