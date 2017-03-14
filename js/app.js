@@ -17,14 +17,11 @@ myApp.factory('_', LodashFactory);
 
 myApp.controller("MainCtlr",["$scope","$state",function($scope,$state){
     $scope.go = function(stateName){
-        console.log(stateName)
         $state.go(stateName);
     }
 }]);
 
 myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
-    // Commented out code to remove the hashtag. Note - need to look further into this aspect.
-    //$locationProvider.html5Mode(true);
     // Defaults all possible routes to the given url of "/"
     $urlRouterProvider.otherwise('/');
     // State provider with defined states/views
@@ -36,6 +33,7 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             templateUrl:"templates/landing.html",
             controller:"homeCtlr"
         })
+        // Actual 
         .state('salGuide',{
             url:"/salGuide",
             templateUrl:"templates/salguide.html",
