@@ -67,7 +67,8 @@ footer {
   height: 100%;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  outline: none; }
   .modal .modal-content {
     flex-direction: column;
     height: 100%;
@@ -168,15 +169,48 @@ footer {
     .landing .content img {
       width: 45%; }
 
-.sguide-table {
+.sguide {
   flex-direction: column; }
-  .sguide-table .table-nav {
+  .sguide #filter-modal ::-webkit-input-placeholder {
+    text-align: right;
+    text-transform: uppercase; }
+  .sguide .table-nav {
     width: 90vw;
-    justify-content: space-between; }
-    .sguide-table .table-nav .text {
-      align-items: flex-end; }
-      .sguide-table .table-nav .text a {
-        margin: 0; }
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 1rem 0; }
+    .sguide .table-nav .title {
+      align-items: flex-end;
+      text-transform: uppercase;
+      font-size: 1rem; }
+      .sguide .table-nav .title h1 {
+        color: #2e2e2e;
+        margin: 0;
+        font-family: "Oswald", sans-serif; }
+      .sguide .table-nav .title a {
+        color: #d41d1d;
+        margin: 0 0 0 1rem;
+        text-decoration: none;
+        font-family: "Prompt", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 200; }
+      .sguide .table-nav .title a:hover {
+        font-weight: 400; }
+      .sguide .table-nav .title a:visited {
+        color: #d41d1d; }
+    .sguide .table-nav button {
+      background-color: #cc4040;
+      border: none;
+      outline: none;
+      border-radius: 2rem;
+      color: #fff;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem;
+      width: 10vw;
+      padding: .5rem .75rem;
+      text-transform: uppercase;
+      font-size: 1rem; }
 
 table {
   border-collapse: collapse;
