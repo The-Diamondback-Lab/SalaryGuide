@@ -1,5 +1,7 @@
 var myApp = angular.module("myApp",["ui.router"]);
 
+// Factory to load 'LoDash" - a useful library for searching through stuff
+// Note: May become useless dependent upon RESTful API implementation
 function LodashFactory($window) {  
   if(!$window._){
     // If lodash is not available you can now provide a
