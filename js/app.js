@@ -1,6 +1,6 @@
 var myApp = angular.module("myApp",["ui.router"]);
 
-function LodashFactory($window) {  
+function LodashFactory($window) {
   if(!$window._){
     // If lodash is not available you can now provide a
     // mock service, try to load it from somewhere else,
@@ -13,12 +13,33 @@ function LodashFactory($window) {
 LodashFactory.$inject = ['$window'];
 
 // Register factory
-myApp.factory('_', LodashFactory); 
+myApp.factory('_', LodashFactory);
+
+myApp.service("tableService",["$http", function($http) {
+    var baseUrl = "php/";
+
+    return{
+        getTable: function() {
+            return $http.get(baseUrl+"getDataTest.php");
+        }
+    };
+}]);
 
 myApp.controller("MainCtlr",["$scope","$state",function($scope,$state){
     $scope.go = function(stateName){
         $state.go(stateName);
     }
+}]);
+
+myApp.controller("testCtlr",["$scope","$http","tableService",function($scope,$http,tableService){
+
+    tableService.getTable().success(function(response){
+        console.log("Response: "+JSON.stringify(response));
+    })
+    /*tableService.getTable().then(function(data) {
+        $scope.tableData = data;
+    });*/
+
 }]);
 
 myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
@@ -40,11 +61,16 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             templateUrl:"templates/2017.html",
             controller:"2017Ctlr"
         })
-        
+        .state('table',{
+            url:"/table",
+            templateUrl:"templates/table.html",
+            controller:"testCtlr"
+        })
+
 });
 
 myApp.controller("homeCtlr",["$scope",function($scope) {
-    
+
 }]);
 
 myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
@@ -61,16 +87,16 @@ myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$h
         //posTest = (termLength - $scope.searchValue.length) > 0;
         termLength = $scope.searchValue.length;
         console.log($scope.searchValue)
-        
+
         //console.log("hi")
         display_data = _.filter(csv_data,function(i){
             return i.name.toLowerCase().includes($scope.searchValue.toLowerCase());
         });
         renderTable();
-        
-        
+
+
     }
-    
+
     function renderTable() {
         //console.log($scope.searchValue);
         //console.log("table rendered")
@@ -82,20 +108,20 @@ myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$h
             htmlString += "<td>" + display_data[i].div + "</td>";
             htmlString += "<td>" + display_data[i].title + "</td>";
             htmlString += "<td>" + display_data[i].salary + "</td>";
-            htmlString += "</tr>"; 
+            htmlString += "</tr>";
         }
         document.getElementById("data").innerHTML = htmlString;
     }
 }]);
 
 myApp.service("CSVtoJSON",["$http", function($http) {
-    
+
     this.read = function(path) {
         return $http.get(path).then(function(data) {
             result = data.data;
             result = result.split("\n");
             comma_split = [];
-            
+
             for(i = 1; i < result.length; i++) {
                 curr_split = result[i].replace(/\"/g,"").split(",");
                 current_obj = {};
@@ -106,12 +132,11 @@ myApp.service("CSVtoJSON",["$http", function($http) {
                 current_obj.salary = (curr_split[5] + "," +curr_split[6]);
                 comma_split.push(current_obj);
             }
-            
+
             //console.log(comma_split);
             return comma_split;
         });
     }
-    
-    
-}]);
 
+
+}]);
