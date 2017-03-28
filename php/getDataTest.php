@@ -4,7 +4,7 @@
 
   $servername = "108.179.232.92";
   $username = "dbklab_dbklab";
-  $password = "dbklab";
+  $password = "onlinedbk123";
   $dbname = "dbklab_salguide";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
