@@ -66,10 +66,10 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             controller:"testCtlr"
         })
         // Actual
-        .state('de',{
-            url:"/de",
-            templateUrl:"templates/de.html",
-            controller:"deCtlr"
+        .state('salGuide',{
+            url:"/salGuide",
+            templateUrl:"templates/salguide.html",
+            controller:"salGuideCtlr"
         });
 });
 
@@ -121,7 +121,9 @@ myApp.controller("salGuideCtlr",["$scope",function($scope) {
     }
 }]);*/
 
+
 /*myApp.service("CSVtoJSON",["$http", function($http) {
+
     this.read = function(path) {
         return $http.get(path).then(function(data) {
             result = data.data;
@@ -143,4 +145,5 @@ myApp.controller("salGuideCtlr",["$scope",function($scope) {
             return comma_split;
         });
     }
+
 }]);*/
