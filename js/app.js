@@ -1,5 +1,6 @@
 var myApp = angular.module("myApp",["ui.router"]);
 
+
 function LodashFactory($window) {
   if(!$window._){
     // If lodash is not available you can now provide a
@@ -43,8 +44,6 @@ myApp.controller("testCtlr",["$scope","$http","tableService",function($scope,$ht
 }]);
 
 myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
-    // Commented out code to remove the hashtag. Note - need to look further into this aspect.
-    //$locationProvider.html5Mode(true);
     // Defaults all possible routes to the given url of "/"
     $urlRouterProvider.otherwise('/');
     // State provider with defined states/views
@@ -53,7 +52,7 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
         // The home state should be the frontpage of the whole project
         .state('home',{
             url:"/",
-            templateUrl:"templates/home.html",
+            templateUrl:"templates/landing.html",
             controller:"homeCtlr"
         })
         .state('2017',{
@@ -66,14 +65,22 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             templateUrl:"templates/table.html",
             controller:"testCtlr"
         })
-
+        // Actual
+        .state('de',{
+            url:"/de",
+            templateUrl:"templates/de.html",
+            controller:"deCtlr"
+        });
 });
 
 myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
+myApp.controller("salGuideCtlr",["$scope",function($scope) {
 
-myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
+}]);
+
+/*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
     var csv_data, display_data;
     $scope.searchValue = '';
     var termLength = 0;
@@ -112,10 +119,9 @@ myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$h
         }
         document.getElementById("data").innerHTML = htmlString;
     }
-}]);
+}]);*/
 
-myApp.service("CSVtoJSON",["$http", function($http) {
-
+/*myApp.service("CSVtoJSON",["$http", function($http) {
     this.read = function(path) {
         return $http.get(path).then(function(data) {
             result = data.data;
@@ -137,6 +143,4 @@ myApp.service("CSVtoJSON",["$http", function($http) {
             return comma_split;
         });
     }
-
-
-}]);
+}]);*/
