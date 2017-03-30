@@ -14,14 +14,14 @@ function LodashFactory($window) {
 LodashFactory.$inject = ['$window'];
 
 // Register factory
-myApp.factory('_', LodashFactory); 
+myApp.factory('_', LodashFactory);
 
 myApp.service("tableService",["$http", function($http) {
     var baseUrl = "php/";
 
     return{
         getTable: function() {
-            return $http.get(baseUrl+"getDataTest.php");
+            return $http.get(baseUrl+"getAllData.php");
         }
     };
 }]);
