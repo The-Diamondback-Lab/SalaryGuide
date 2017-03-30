@@ -14,7 +14,7 @@ function LodashFactory($window) {
 LodashFactory.$inject = ['$window'];
 
 // Register factory
-myApp.factory('_', LodashFactory);
+myApp.factory('_', LodashFactory); 
 
 myApp.service("tableService",["$http", function($http) {
     var baseUrl = "php/";
@@ -34,12 +34,9 @@ myApp.controller("MainCtlr",["$scope","$state",function($scope,$state){
 
 myApp.controller("testCtlr",["$scope","$http","tableService",function($scope,$http,tableService){
 
-    tableService.getTable().success(function(response){
-        console.log("Response: "+JSON.stringify(response));
-    })
-    /*tableService.getTable().then(function(data) {
+    tableService.getTable().then(function(data) {
         $scope.tableData = data;
-    });*/
+    })
 
 }]);
 
