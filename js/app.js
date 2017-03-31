@@ -73,8 +73,13 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
 myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
-myApp.controller("salGuideCtlr",["$scope",function($scope) {
-
+myApp.controller("salGuideCtlr",["$scope","tableService",function($scope,tableService) {
+    tableService.getTable().then(function(data) {
+        var tableArr = data.data.slice(0,20)
+        $scope.tableData = tableArr;
+        
+        console.log($scope.tableData);
+    })
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {

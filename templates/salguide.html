@@ -22,38 +22,27 @@
                     <th>Annual Base Salary</th>
                 </tr>
 
-                <tr>
+                <tr ng-repeat="row in tableData">
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        {{row.Employee}}
+                    </td>
+                    <td>
+                        {{row.Department}}
+                    </td>
+                    <td>
+                        {{row.Division}}
+                    </td>
+                    <td>
+                        {{row.Title}}
+                    </td>
+                    <td>
+                        {{row.Salary}}
+                    </td>
                 </tr>
 
-                <tr>
-                    <td>
-                        <input type="checkbox">
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox">
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </table>
         </div>
 
