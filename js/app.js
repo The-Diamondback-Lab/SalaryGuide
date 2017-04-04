@@ -74,12 +74,30 @@ myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
 myApp.controller("salGuideCtlr",["$scope","tableService",function($scope,tableService) {
+    $scope.page_count = 1;
+    $scope.max_pages = 1;
+    var full_data = [];
     tableService.getTable().then(function(data) {
-        var tableArr = data.data.slice(0,20)
+        full_data = data.data;
+        var tableArr = data.data.slice(0,10)
         $scope.tableData = tableArr;
+        //console.log(full_data.length)
+        $scope.max_pages =  full_data.length / 10;
         
-        console.log($scope.tableData);
+        //console.log($scope.tableData);
     })
+    $scope.next_page = function() {
+        if ($scope.page_count <= $scope.max_pages) {
+            $scope.tableData = full_data.slice($scope.page_count*10, ($scope.page_count+1)*10);
+            $scope.page_count += 1;
+        }
+    }
+    $scope.prev_page = function() {
+        if($scope.page_count > 1) {
+            $scope.page_count -= 1;
+            $scope.tableData = full_data.slice(($scope.page_count-1)*10, $scope.page_count*10);
+        } 
+    }
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
