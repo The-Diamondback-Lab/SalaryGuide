@@ -12,7 +12,10 @@
   	die("Connection failed: " .mysqli_connecet_error());
   }
 
-  $showData = "SELECT * FROM 2017Data";
+  $year = $_GET['year'];
+  $tableName = $year."Data";
+
+  $showData = "SELECT * FROM $year";
   $data = array();
   $result = mysqli_query($conn, $showData);
 
@@ -20,9 +23,8 @@
   	while($row = mysqli_fetch_assoc($result)){
   		$data[] = $row;
   	}
-  } else {
-  	echo "Empty";
-  };
+  }
+
   echo json_encode($data);
   mysqli_close($conn);
 
