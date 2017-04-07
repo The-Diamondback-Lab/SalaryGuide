@@ -21,7 +21,7 @@ myApp.service("tableService",["$http", function($http) {
 
     return{
         getTable: function() {
-            return $http.get(baseUrl+"getAllData.php");
+            return $http.get(baseUrl+"getAllData.php?year=2017");
         }
     };
 }]);
