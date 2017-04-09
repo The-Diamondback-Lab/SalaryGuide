@@ -20,8 +20,8 @@ myApp.service("tableService",["$http", function($http) {
     var baseUrl = "php/";
 
     return{
-        getTable: function() {
-            return $http.get(baseUrl+"getAllData.php?year=2017");
+        getTable: function(year) {
+            return $http.get(baseUrl+"getAllData.php?year="+year);
         }
     };
 }]);
@@ -29,6 +29,7 @@ myApp.service("tableService",["$http", function($http) {
 myApp.controller("MainCtlr",["$scope","$state",function($scope,$state){
     $scope.go = function(stateName){
         $state.go(stateName);
+
     }
 }]);
 
@@ -64,7 +65,7 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
         })
         // Actual
         .state('salGuide',{
-            url:"/salGuide",
+            url:"/salGuide?year",
             templateUrl:"templates/salguide.html",
             controller:"salGuideCtlr"
         });
@@ -73,11 +74,15 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
 myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
-myApp.controller("salGuideCtlr",["$scope","tableService",function($scope,tableService) {
+myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",function($scope, $stateParams, tableService) {
     $scope.page_count = 1;
     $scope.max_pages = 1;
+    $scope.year = $stateParams.year;
     var full_data = [];
-    tableService.getTable().then(function(data) {
+    if ($stateParams.year == null){
+      $stateParams.year = 2017;
+    }
+    tableService.getTable($stateParams.year).then(function(data) {
         full_data = data.data;
         var tableArr = data.data.slice(0,10)
         $scope.tableData = tableArr;
