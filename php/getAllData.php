@@ -15,7 +15,8 @@
   $year = $_GET['year'];
   $tableName = $year."Data";
 
-  $showData = "SELECT * FROM $year";
+
+  $showData = "SELECT * FROM ".$tableName;
   $data = array();
   $result = mysqli_query($conn, $showData);
 

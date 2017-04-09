@@ -83,7 +83,7 @@ myApp.controller("salGuideCtlr",["$scope","tableService",function($scope,tableSe
         $scope.tableData = tableArr;
         //console.log(full_data.length)
         $scope.max_pages =  full_data.length / 10;
-        
+
         //console.log($scope.tableData);
     })
     $scope.next_page = function() {
@@ -96,7 +96,7 @@ myApp.controller("salGuideCtlr",["$scope","tableService",function($scope,tableSe
         if($scope.page_count > 1) {
             $scope.page_count -= 1;
             $scope.tableData = full_data.slice(($scope.page_count-1)*10, $scope.page_count*10);
-        } 
+        }
     }
 }]);
 
