@@ -25,8 +25,9 @@ $(document).ready(function () {
     jquery functions for salary guide landing page
     */
     $('#filter').click(function () {
-        $('#filter-modal').css('display', 'block');
+        $('.filter').toggleClass('toggleDisplay');
         $('#salary').css('font-weight', 400);
+        $('#dept').css('font-weight', 200);
         $('.sal-options').css('display', 'flex');
         $('.dept-options').css('display', 'none');
     });
@@ -53,10 +54,11 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
-    /*
-    filter modal functions
-    */
 
+
+    /*
+    filter functions
+    */
     $('.A').click(function () {
         $('#A').css('display', 'flex');
         $('#B').css('display', 'none');

@@ -1,5 +1,10 @@
 * {
     box-sizing: border-box;
+    outline: none;
+}
+
+* a:hover {
+    cursor: default;
 }
 
 .wrapper {
@@ -19,6 +24,10 @@ body {
     color: #2e2e2e;
     width: 100vw;
     overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
 }
 
 header {
@@ -42,6 +51,7 @@ header p {
 }
 
 header p a {
+    font-family: "Oswald", sans-serif;
     text-decoration: none;
 }
 
@@ -100,11 +110,34 @@ button {
     border-radius: 2rem;
     color: #fff;
     font-family: "Oswald", sans-serif;
-    font-size: 1.25rem;
     width: 10vw;
     padding: 0.5rem 0.75rem;
     text-transform: uppercase;
     font-size: 1rem;
+}
+
+#search {
+    width: 20%;
+    outline: none;
+    border: 3px solid #e1e1e1;
+    border-radius: 2rem;
+    padding: .25rem 1rem;
+}
+
+#search[type=text]:focus {
+    border-color: #d41d1d;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+    color: #2e2e2e;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+}
+
+.toggleDisplay {
+    display: none;
 }
 
 .modal {
@@ -282,87 +315,130 @@ button {
     flex-direction: column;
 }
 
-.sguide #filter-modal {
-    overflow-y: scroll;
-}
-
-.sguide #filter-modal .filter-options {
-    flex-direction: row;
-}
-
-.sguide #filter-modal .filter-options h4 {
-    margin: 0 3rem;
-    font-family: "Prompt", sans-serif;
-    font-weight: 200;
+.sguide h1 {
+    font-family: "Oswald", sans-serif;
+    color: #d41d1d;
     text-transform: uppercase;
 }
 
-.sguide #filter-modal .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.sguide p {
+    font-family: "Prompt", sans-serif;
+    color: #2e2e2e;
+    font-weight: 200;
 }
 
-.sguide #filter-modal .options .sal-options {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+.sguide .filter {
+    width: 90vw;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 1rem 0;
 }
 
-.sguide #filter-modal .options .sal-options p {
-    margin: 0 1rem;
-    color: #d41d1d;
-    font-weight: 300;
+.sguide .filter .filter-nav {
+    margin-right: 1rem;
 }
 
-.sguide #filter-modal .options .dept-options {
-    display: flex;
+.sguide .filter .filter-nav h1 {
+    margin: 0 .25rem .45rem 0;
+}
+
+.sguide .filter .filter-nav p {
+    margin: .25rem 0 .25rem 0;
+}
+
+.sguide .filter .options {
+    border-left: 1px solid #2e2e2e;
+}
+
+.sguide .filter .options .sal-options {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5rem 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sguide .filter .options .sal-options h1 {
+    margin: 0 0 .45rem 1rem;
+}
+
+.sguide .filter .options .sal-options .ranges {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sguide .filter .options .sal-options .ranges p {
+    margin: .25rem 0 .25rem 1rem;
+    text-align: left;
+}
+
+.sguide .filter .options .sal-options .ranges p:hover {
+    color: #d41d1d;
+    cursor: default;
+}
+
+.sguide .filter .options .dept-options {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header {
+    align-items: baseline;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header h1 {
+    margin: 0 1rem 0 1rem;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header #dept-nav {
+    margin: 0 0 0 0;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header #dept-nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 200;
+    margin: 0;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:hover {
+    font-weight: 400;
+    color: #d41d1d;
+    cursor: default;
+}
+
+.sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:visited {
+    color: #2e2e2e;
+}
+
+.sguide .filter .options #depts {
+    flex-direction: column;
+}
+
+.sguide .filter .options #depts .list-containers {
+    display: none;
+    margin: 0;
+}
+
+.sguide .filter .options #depts .list-containers .dept-lists {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.sguide .filter .options #depts .list-containers .dept-lists li {
+    margin: .25rem;
     font-family: "Prompt", sans-serif;
     font-weight: 200;
-    text-align: center;
 }
 
-.sguide #filter-modal .options .dept-options a {
-    text-decoration: none;
+.sguide .filter .options #depts .list-containers .dept-lists li:first-child {
+    margin-top: 0;
+}
+
+.sguide .filter .options #depts .list-containers .dept-lists li:hover {
     color: #d41d1d;
-}
-
-.sguide #filter-modal .options .dept-options .dept-nav {
-    display: flex;
-    flex-direction: row;
-}
-
-.sguide #filter-modal .options .dept-options #depts {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.sguide #filter-modal .options .dept-options #depts .list-containers {
-    display: none;
-}
-
-.sguide #filter-modal .options .dept-options #depts .list-containers .dept-lists {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.sguide #filter-modal #filter {
-    background-color: #d41d1d;
-    margin: 1rem 0;
+    cursor: default;
 }
 
 .sguide .table .table-nav {
@@ -404,7 +480,7 @@ button {
 
 .sguide .table table {
     border-collapse: collapse;
-    width: 90vw;
+    width: 100%;
     text-align: center;
 }
 
@@ -412,15 +488,21 @@ button {
     background-color: #d41d1d;
 }
 
+.sguide .table table th:last-child {
+    margin-right: 1rem;
+}
+
 .sguide .table table .table-header {
     color: #fff;
     text-align: center;
     height: 5vh;
     text-transform: uppercase;
+    width: 95vw;
 }
 
 .sguide .table table tr {
-    height: 7vh;
+    height: 5vh;
+    border: none;
 }
 
 .sguide .table table tr:nth-child(odd) {
@@ -488,6 +570,9 @@ button {
     .landing img {
         display: none;
     }
+    .sguide #filter-modal .modal-content #filter-text .filter-options .filter-header {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 412px) and (max-width: 767px) {
@@ -528,11 +613,55 @@ button {
     .landing .content img {
         display: none;
     }
+    .sguide .filter-nav h1 {
+        font-size: .8rem;
+    }
+    .sguide .filter-nav p {
+        font-size: .75rem;
+    }
+    .sguide .options .sal-options h1 {
+        font-size: .8rem;
+    }
+    .sguide .options .sal-options .ranges div p {
+        font-size: .75rem;
+    }
+    .sguide .options .dept-options .deptandtitle-header h1 {
+        font-size: .8rem;
+    }
+    .sguide .options .dept-options .deptandtitle-header #dept-nav {
+        margin-left: .5rem;
+        font-size: .5rem;
+    }
+    .sguide .options .dept-options .deptandtitle-header a {
+        font-size: .5rem;
+    }
+    .sguide .table .table-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .sguide .table .table-nav .title {
+        justify-content: space-between;
+    }
+    .sguide .table .table-nav .title h1 {
+        margin-left: 0;
+    }
+    .sguide .table .table-nav .title #filter {
+        margin-left: .6rem;
+        text-align: right;
+    }
+    .sguide .table .table-nav #search {
+        width: 100vw;
+        margin-top: .25rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .modal .modal-content #prev-text {
         height: 27%;
+    }
+    .modal .modal-content #filter-text {
+        height: 40%;
     }
     .modal .modal-content .text {
         padding: 1.25rem 1rem;
@@ -542,6 +671,9 @@ button {
     }
     .modal .modal-content .text .close:hover {
         font-size: 1.5rem;
+    }
+    .modal .modal-content .text #search {
+        padding: .1rem 1rem;
     }
     .modal .modal-content .text h1 {
         font-size: 1.6rem;
@@ -554,6 +686,19 @@ button {
     }
     .landing .content .text .title {
         font-size: 3.5rem;
+    }
+    .sguide .filter-nav p {
+        font-size: .85rem;
+    }
+    .sguide .options .sal-options .ranges div p {
+        font-size: .75rem;
+    }
+    .sguide .options .dept-options .deptandtitle-header {
+        align-items: flex-end;
+    }
+    .sguide .options .dept-options .deptandtitle-header #dept-nav a {
+        margin-left: .5rem;
+        font-size: .75rem;
     }
 }
 
