@@ -12,7 +12,10 @@
                 <input type="text" ng-model="search_term" ng-change="search_data()" type="search" placeholder="SEARCH" id="search">
             </div>
 
-            <table>
+            <div ng-if="dataLoading"><img src = "sources/loading.gif" /></div>
+
+
+            <table ng-if="dataLoading == false">
                 <tr class="table-header">
                     <th><i class="fa fa-check-square-o" aria-hidden="true"></i></th>
                     <th>Employee</th>
@@ -44,8 +47,10 @@
                 </tr>
 
             </table>
+            <div ng-if="dataLoading == false">
             <button id="prev" ng-disalbed="page_count == 1" ng-click="prev_page()">Previous</button>
             <button id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">Next</button>
+            </div>
         </div>
 
         <div class="filter center toggleDisplay">
