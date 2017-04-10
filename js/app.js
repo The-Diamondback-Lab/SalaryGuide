@@ -78,7 +78,10 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",functi
     $scope.dataLoading = true;
     $scope.page_count = 1;
     $scope.max_pages = 1;
+    $scope.year = $stateParams.year;
+    $scope.search_term = "";
     var full_data = [];
+    var curr_data = [];
     if ($stateParams.year == null){
       $stateParams.year = 2017;
     }
@@ -86,6 +89,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",functi
     tableService.getTable($stateParams.year).then(function(data) {
         $scope.dataLoading = false;
         full_data = data.data;
+        curr_data = full_data;
         var tableArr = data.data.slice(0,10)
         $scope.tableData = tableArr;
         //console.log(full_data.length)
@@ -95,14 +99,23 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",functi
     })
     $scope.next_page = function() {
         if ($scope.page_count <= $scope.max_pages) {
-            $scope.tableData = full_data.slice($scope.page_count*10, ($scope.page_count+1)*10);
+            $scope.tableData = curr_data.slice($scope.page_count*10, ($scope.page_count+1)*10);
             $scope.page_count += 1;
         }
     }
     $scope.prev_page = function() {
         if($scope.page_count > 1) {
             $scope.page_count -= 1;
-            $scope.tableData = full_data.slice(($scope.page_count-1)*10, $scope.page_count*10);
+            $scope.tableData = curr_data.slice(($scope.page_count-1)*10, $scope.page_count*10);
+        }
+    }
+    $scope.search_data = function() {
+        if($scope.search_term.length > 3) {
+            
+        } else {
+            page_count = 1;
+            curr_data = full_data;
+            max_pages = full_data.length / 10;
         }
     }
 }]);
