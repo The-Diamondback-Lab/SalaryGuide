@@ -398,6 +398,7 @@ button {
     text-decoration: none;
     font-weight: 200;
     margin: 0;
+    color: #d41d1d;
 }
 
 .sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:hover {
@@ -407,7 +408,7 @@ button {
 }
 
 .sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:visited {
-    color: #2e2e2e;
+    color: #d41d1d;
 }
 
 .sguide .filter .options #depts {
@@ -570,8 +571,52 @@ button {
     .landing img {
         display: none;
     }
-    .sguide #filter-modal .modal-content #filter-text .filter-options .filter-header {
+    .sguide .table .table-nav {
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 90vw;
+    }
+    .sguide .table .table-nav .title {
+        justify-content: space-between;
+    }
+    .sguide .table .table-nav .title h1 {
+        margin-left: 0;
+        font-size: 1.5rem;
+    }
+    .sguide .table .table-nav .title #filter {
+        margin-left: .75rem;
+        text-align: right;
+        font-size: 1rem;
+    }
+    .sguide .table .table-nav #search {
+        width: 90vw;
+        margin: .25rem 0 0 0;
+    }
+    .sguide .table .filter {
+        width: 90vw;
+    }
+    .sguide .table .filter .options .sal-options .ranges div p {
+        font-size: .8rem;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header {
+        flex-direction: column;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav {
+        margin: 0 0 0 1rem;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav a {
+        font-size: 1rem;
+    }
+    .sguide .table .filter .options #depts .list-containers .dept-lists li {
+        font-size: .85rem;
+        margin-left: -1.5rem;
+    }
+    .sguide .table table .table-header th {
+        font-size: .6rem;
+    }
+    .sguide .table table .table-header td {
+        font-size: .5rem;
     }
 }
 
@@ -613,28 +658,6 @@ button {
     .landing .content img {
         display: none;
     }
-    .sguide .filter-nav h1 {
-        font-size: .8rem;
-    }
-    .sguide .filter-nav p {
-        font-size: .75rem;
-    }
-    .sguide .options .sal-options h1 {
-        font-size: .8rem;
-    }
-    .sguide .options .sal-options .ranges div p {
-        font-size: .75rem;
-    }
-    .sguide .options .dept-options .deptandtitle-header h1 {
-        font-size: .8rem;
-    }
-    .sguide .options .dept-options .deptandtitle-header #dept-nav {
-        margin-left: .5rem;
-        font-size: .5rem;
-    }
-    .sguide .options .dept-options .deptandtitle-header a {
-        font-size: .5rem;
-    }
     .sguide .table .table-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -651,8 +674,33 @@ button {
         text-align: right;
     }
     .sguide .table .table-nav #search {
-        width: 100vw;
-        margin-top: .25rem;
+        width: 90vw;
+        margin: .25rem 0 0 0;
+    }
+    .sguide .table .filter {
+        width: 90vw;
+    }
+    .sguide .table .filter .options .sal-options .ranges div p {
+        font-size: .8rem;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header {
+        flex-direction: column;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav {
+        margin: 0 0 0 1rem;
+    }
+    .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav a {
+        font-size: 1rem;
+    }
+    .sguide .table .filter .options #depts .list-containers .dept-lists li {
+        font-size: .85rem;
+        margin-left: -1.5rem;
+    }
+    .sguide .table table .table-header th {
+        font-size: .7rem;
+    }
+    .sguide .table table .table-header td {
+        font-size: .65rem;
     }
 }
 
