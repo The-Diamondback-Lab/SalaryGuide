@@ -77,11 +77,8 @@ myApp.controller("homeCtlr",["$scope",function($scope) {
 myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",function($scope, $stateParams, tableService) {
     $scope.page_count = 1;
     $scope.max_pages = 1;
-<<<<<<< HEAD
     $scope.year = $stateParams.year;
     $scope.search_term = "";
-=======
->>>>>>> origin/master
     var full_data = [];
     var curr_data = [];
     if ($stateParams.year == null){
