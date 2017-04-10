@@ -77,13 +77,17 @@ myApp.controller("homeCtlr",["$scope",function($scope) {
 myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",function($scope, $stateParams, tableService) {
     $scope.page_count = 1;
     $scope.max_pages = 1;
+<<<<<<< HEAD
     $scope.year = $stateParams.year;
     $scope.search_term = "";
+=======
+>>>>>>> origin/master
     var full_data = [];
     var curr_data = [];
     if ($stateParams.year == null){
       $stateParams.year = 2017;
     }
+    $scope.year = $stateParams.year;
     tableService.getTable($stateParams.year).then(function(data) {
         full_data = data.data;
         curr_data = full_data;
