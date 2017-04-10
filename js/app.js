@@ -74,12 +74,11 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
 myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
-<<<<<<< HEAD
+
 myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",function($scope, $stateParams, tableService,_) {
-=======
-myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",function($scope, $stateParams, tableService) {
+
     $scope.dataLoading = true;
->>>>>>> origin/master
+
     $scope.page_count = 1;
     $scope.max_pages = 1;
     $scope.year = $stateParams.year;
