@@ -74,11 +74,12 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
 myApp.controller("homeCtlr",["$scope",function($scope) {
 
 }]);
-myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",function($scope, $stateParams, tableService) {
+myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",function($scope, $stateParams, tableService,_) {
     $scope.page_count = 1;
     $scope.max_pages = 1;
     $scope.year = $stateParams.year;
     $scope.search_term = "";
+    $scope.tableData = [];
     var full_data = [];
     var curr_data = [];
     if ($stateParams.year == null){
@@ -88,13 +89,13 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",functi
     tableService.getTable($stateParams.year).then(function(data) {
         full_data = data.data;
         curr_data = full_data;
-        var tableArr = data.data.slice(0,10)
+        var tableArr = full_data.slice(0,10)
         $scope.tableData = tableArr;
         //console.log(full_data.length)
         $scope.max_pages =  full_data.length / 10;
 
         //console.log($scope.tableData);
-    })
+    });
     $scope.next_page = function() {
         if ($scope.page_count <= $scope.max_pages) {
             $scope.tableData = curr_data.slice($scope.page_count*10, ($scope.page_count+1)*10);
@@ -109,11 +110,20 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService",functi
     }
     $scope.search_data = function() {
         if($scope.search_term.length > 3) {
-            
+            result = _.filter(full_data, function(elt) {
+                return elt.Employee.toLowerCase().includes($scope.search_term.toLowerCase());
+            });
+            curr_data = result;
+            page_count = 1;
+            $scope.max_pages = curr_data.length / 10;
+            $scope.tableData = curr_data.slice(0,10);
         } else {
+            //console.log(full_data.length);
+            
             page_count = 1;
             curr_data = full_data;
             max_pages = full_data.length / 10;
+            $scope.tableData = full_data.slice(0,10);
         }
     }
 }]);
