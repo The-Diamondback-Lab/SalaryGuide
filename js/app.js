@@ -97,7 +97,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         var tableArr = full_data.slice(0,10)
         $scope.tableData = tableArr;
         //console.log(full_data.length)
-        $scope.max_pages =  full_data.length / 10;
+        $scope.max_pages =  Math.ceil (full_data.length / 10);
 
         //console.log($scope.tableData);
     });
@@ -114,20 +114,26 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         }
     }
     $scope.search_data = function() {
-        if($scope.search_term.length > 3) {
+        if($scope.search_term.length > 0) {
             result = _.filter(full_data, function(elt) {
-                return elt.Employee.toLowerCase().includes($scope.search_term.toLowerCase());
+                a = elt.Employee.toLowerCase().includes($scope.search_term.toLowerCase());
+                b = elt.Department.toLowerCase().includes($scope.search_term.toLowerCase());
+                c = elt.Division.toLowerCase().includes($scope.search_term.toLowerCase());
+                d = elt.Title.toLowerCase().includes($scope.search_term.toLowerCase());
+                e = elt.Salary.toLowerCase().includes($scope.search_term.toLowerCase());
+                return a || b || c || d || e;
+
             });
             curr_data = result;
-            page_count = 1;
-            $scope.max_pages = curr_data.length / 10;
+            $scope.page_count = 1;
+            $scope.max_pages = Math.ceil(curr_data.length / 10);
             $scope.tableData = curr_data.slice(0,10);
         } else {
             //console.log(full_data.length);
-            
-            page_count = 1;
+
+            $scope.page_count = 1;
             curr_data = full_data;
-            max_pages = full_data.length / 10;
+            $scope.max_pages = Math.ceil(full_data.length / 10);
             $scope.tableData = full_data.slice(0,10);
         }
     }
