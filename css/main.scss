@@ -1,0 +1,820 @@
+@import "../assets/bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+//variables
+$black: #2e2e2e;
+$red: #d41d1d;
+$disabled-red: #cc4040;
+$white: #fff;
+$grey: #ebebeb;
+$darkgrey: #e1e1e1;
+$oswald: "Oswald",
+sans-serif;
+$prompt: "Prompt",
+sans-serif;
+//breakpoints variables
+$phones: 320px 411px;
+$phoneTablets: 412px 767px;
+$tablet: 768px 1024px;
+//general styles
+* {
+    box-sizing: border-box;
+    outline: none;
+    a:hover {
+        cursor: default;
+    }
+}
+
+.wrapper {
+    max-width: 90%;
+    width: 2480px;
+    margin: 0 auto;
+}
+
+.center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    color: $black;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: $oswald;
+}
+
+header {
+    flex-direction: column;
+    width: 100vw;
+    margin: .5rem 0 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    p {
+        border-bottom: thin solid $black;
+        color: $black;
+        font-family: $oswald;
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 35%;
+        margin: 0;
+        a {
+            font-family: $oswald;
+            text-decoration: none;
+        }
+        a:visited {
+            color: $black;
+        }
+    }
+    nav {
+        margin: .25rem 0 0 0;
+        a {
+            color: $red;
+            font-family: $prompt;
+            font-weight: 200;
+            padding: 0 0.25rem;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        a:hover {
+            font-weight: 400;
+            cursor: default;
+        }
+    }
+}
+
+footer {
+    border-top: thin solid $black;
+    flex-direction: column;
+    width: 35%;
+    bottom: 0;
+    position: fixed;
+    margin: 0 0 .5rem 0;
+    .social-links {
+        margin: 0.25rem 0 0 0;
+        a {
+            color: $black;
+            font-size: 2rem;
+            text-align: center;
+            margin: 0 0.25rem;
+        }
+        a:hover {
+            color: $red;
+            font-size: 2.15rem;
+        }
+    }
+}
+
+button {
+    background-color: $disabled-red;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: $white;
+    font-family: $oswald;
+    width: 10vw;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#search {
+    width: 20%;
+    outline: none;
+    border: 3px solid $darkgrey;
+    border-radius: 2rem;
+    padding: .25rem 1rem;
+}
+
+#search[type=text]:focus {
+    border-color: $red;
+    font-family: $prompt;
+    font-weight: 300;
+}
+
+ ::-webkit-input-placeholder {
+    color: $black;
+    font-family: $prompt;
+    font-weight: 300;
+}
+
+.toggleDisplay {
+    display: none;
+}
+
+//end general styles
+//begin modal styles
+.modal {
+    display: none;
+    position: fixed;
+    background: fade-out($black, 0.6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    outline: none;
+    padding: 1.5rem 1rem;
+    .modal-header {
+        justify-content: flex-end;
+        .close {
+            font-family: $prompt;
+            font-weight: 200;
+            color: $black;
+            font-size: 5rem;
+            margin: 0;
+            position: fixed;
+        }
+        .close:hover {
+            cursor: default;
+        }
+    }
+    .modal-content {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        #prev-text {
+            height: 35%;
+            padding: 2rem 3rem;
+        }
+        .text {
+            flex-direction: column;
+            height: 60%;
+            width: 70%;
+            background: $white;
+            z-index: 1;
+            position: fixed;
+            padding: 2rem 3rem;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: 0 auto;
+            h1 {
+                color: $red;
+                font-family: $oswald;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0 0 .75rem;
+                border-bottom: thin solid $black;
+                width: 100%;
+            }
+            p {
+                color: $black;
+                font-family: $prompt;
+                text-align: left;
+                margin: 0;
+                font-size: .9rem;
+                font-weight: 200;
+            }
+            .links {
+                flex-direction: column;
+                margin: 0.25rem 0 0 0;
+                a {
+                    color: $black;
+                    font-size: 1rem;
+                    text-align: center;
+                    margin: 0 0.25rem;
+                    text-decoration: none;
+                    font-family: $prompt;
+                    font-size: 1rem;
+                    margin: 0.5rem 0;
+                    font-weight: 200;
+                }
+                a:last-child {
+                    margin-bottom: 0;
+                }
+                a:hover {
+                    color: $red;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+//end modal styles
+//begin landing page styles
+.landing {
+    flex-direction: column;
+    .content {
+        flex-direction: row;
+        margin: 6.5rem 0;
+        position: fixed;
+        width: 100vw;
+        top: 37.5%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        .text {
+            margin: 0 1rem;
+            p:first-child {
+                font-family: $prompt;
+                font-weight: 300;
+                color: $red;
+                font-size: 2.5rem;
+                text-align: left;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            .title {
+                font-family: $oswald;
+                color: $black;
+                text-align: left;
+                font-size: 5.5rem;
+                margin: 0 0 0.5rem 0;
+                text-transform: uppercase;
+            }
+            p:last-child {
+                font-family: $oswald;
+                color: $white;
+                background-color: $red;
+                font-size: 2.5rem;
+                padding: 0.5rem 0.25rem 0.5rem 0;
+                margin: 0;
+                text-align: right;
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+                a:visited {
+                    color: $white;
+                }
+            }
+            #view:hover {
+                background-color: $white;
+                a {
+                    color: $red;
+                }
+            }
+        }
+        img {
+            width: 45%;
+        }
+    }
+}
+
+//end landing page styles
+//begin salary guide page styles
+.sguide {
+    flex-direction: column;
+    h1 {
+        font-family: $oswald;
+        color: $red;
+        text-transform: uppercase;
+    }
+    p {
+        font-family: $prompt;
+        color: $black;
+        font-weight: 200;
+    }
+    .filter {
+        width: 90vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 1rem 0;
+        .filter-nav {
+            margin-right: 1rem;
+            h1 {
+                margin: 0 .25rem .45rem 0;
+            }
+            p {
+                margin: .25rem 0 .25rem 0;
+            }
+        }
+        .options {
+            border-left: 1px solid $black;
+            .sal-options {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                h1 {
+                    margin: 0 0 .45rem 1rem;
+                }
+                .ranges {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    p {
+                        margin: .25rem 0 .25rem 1rem;
+                        text-align: left;
+                    }
+                    p:hover {
+                        color: $red;
+                        cursor: default;
+                    }
+                }
+            }
+            .dept-options {
+                flex-direction: column;
+                align-items: flex-start;
+                .deptandtitle-header {
+                    align-items: baseline;
+                    h1 {
+                        margin: 0 1rem 0 1rem;
+                    }
+                    #dept-nav {
+                        margin: 0 0 0 0;
+                        a {
+                            font-size: 1.2rem;
+                            text-decoration: none;
+                            font-weight: 200;
+                            margin: 0;
+                            color: $red;
+                        }
+                        a:hover {
+                            font-weight: 400;
+                            color: $red;
+                            cursor: default;
+                        }
+                        a:visited {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            #depts {
+                flex-direction: column;
+                .list-containers {
+                    display: none;
+                    margin: 0;
+                    .dept-lists {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        list-style: none;
+                        li {
+                            margin: .25rem;
+                            font-family: $prompt;
+                            font-weight: 200;
+                        }
+                        li:first-child {
+                            margin-top: 0;
+                        }
+                        li:hover {
+                            color: $red;
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table {
+        .table-nav {
+            width: 90vw;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 6rem 0 1rem;
+            .title {
+                align-items: flex-end;
+                text-transform: uppercase;
+                font-size: 1rem;
+                h1 {
+                    color: $black;
+                    margin: 0;
+                    font-family: $oswald;
+                }
+                a {
+                    color: $red;
+                    margin: 0 0 0 1rem;
+                    text-decoration: none;
+                    font-family: $prompt;
+                    font-size: 1.3rem;
+                    font-weight: 200;
+                }
+                a:hover {
+                    font-weight: 400;
+                }
+                a:visited {
+                    color: $red;
+                }
+            }
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+            th {
+                background-color: $red;
+            }
+            th:last-child {
+                margin-right: 1rem;
+            }
+            .table-header {
+                color: $white;
+                text-align: center;
+                height: 5vh;
+                text-transform: uppercase;
+                width: 95vw;
+            }
+            tr {
+                height: 5vh;
+                border: none;
+            }
+            tr:nth-child(odd) {
+                background-color: $darkgrey;
+            }
+            tr:nth-child(even) {
+                background-color: $grey;
+            }
+        }
+    }
+}
+
+//media queries - portait view
+@include breakpoint($phones) {
+    header {
+        p {
+            font-size: 1.5rem;
+        }
+        nav {
+            a {
+                font-size: .9rem;
+            }
+        }
+    }
+    footer {
+        width: 37%;
+        .social-links {
+            a {
+                font-size: 1.35rem;
+            }
+        }
+    }
+    .modal {
+        .modal-content {
+            #prev-text {
+                height: 35%;
+                padding: 1.75rem 1.5rem;
+                #prev-close {
+                    font-size: 1.5rem;
+                    margin: 0 0 .5rem 0;
+                }
+                h1 {
+                    margin: 1.75rem 0 .25rem 0;
+                }
+                .links {
+                    a {
+                        font-size: .8rem;
+                    }
+                }
+            }
+            .text {
+                padding: .75rem;
+                width: 80%;
+                .close {
+                    font-size: 1.25rem;
+                }
+                .close:hover {
+                    font-size: 1rem;
+                }
+                h1 {
+                    font-size: 1.25rem;
+                    margin: 1.2rem 0 .5rem 0;
+                }
+                p {
+                    font-size: .1rem;
+                }
+            }
+        }
+    }
+    .landing {
+        .content {
+            .text {
+                p:first-child {
+                    font-size: 1.4rem;
+                }
+                .title {
+                    font-size: 3rem;
+                }
+                p:last-child {
+                    font-size: 1.75rem;
+                    padding: 0.3rem 0.2rem 0.3rem 0;
+                }
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+    .sguide {
+        .table {
+            .table-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 90vw;
+                .title {
+                    justify-content: space-between;
+                    h1 {
+                        margin-left: 0;
+                        font-size: 1.5rem;
+                    }
+                    #filter {
+                        margin-left: .75rem;
+                        text-align: right;
+                        font-size: 1rem;
+                    }
+                }
+                #search {
+                    width: 90vw;
+                    margin: .25rem 0 0 0;
+                }
+            }
+            .filter {
+                width: 90vw;
+                .options {
+                    .sal-options {
+                        .ranges {
+                            div {
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+                    }
+                    .dept-options {
+                        .deptandtitle-header {
+                            flex-direction: column;
+                            #dept-nav {
+                                margin: 0 0 0 1rem;
+                                a {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    #depts {
+                        .list-containers {
+                            .dept-lists {
+                                li {
+                                    font-size: .85rem;
+                                    margin-left: -1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            table {
+                .table-header {
+                    th {
+                        font-size: .6rem;
+                    }
+                    td {
+                        font-size: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint($phoneTablets) {
+    footer {
+        width: 45%;
+        .social-links {
+            a {
+                font-size: 2rem;
+            }
+        }
+    }
+    .modal {
+        .modal-content {
+            #prev-text {
+                height: 32%;
+            }
+            .text {
+                padding: 1.25rem 1rem;
+                .close {
+                    font-size: 1.5rem;
+                }
+                .close:hover {
+                    font-size: 1.5rem;
+                }
+                h1 {
+                    font-size: 1.6rem;
+                }
+                p {
+                    font-size: .6rem;
+                }
+            }
+        }
+    }
+    .landing {
+        .content {
+            .text {
+                p:first-child {
+                    font-size: 1.5rem;
+                }
+                .title {
+                    font-size: 3.2rem;
+                }
+                p:last-child {
+                    font-size: 2rem;
+                    padding: 0.3rem 0.2rem 0.3rem 0;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    .sguide {
+        .table {
+            .table-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .title {
+                    justify-content: space-between;
+                    h1 {
+                        margin-left: 0;
+                    }
+                    #filter {
+                        margin-left: .6rem;
+                        text-align: right;
+                    }
+                }
+                #search {
+                    width: 90vw;
+                    margin: .25rem 0 0 0;
+                }
+            }
+            .filter {
+                width: 90vw;
+                .options {
+                    .sal-options {
+                        .ranges {
+                            div {
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+                    }
+                    .dept-options {
+                        .deptandtitle-header {
+                            flex-direction: column;
+                            #dept-nav {
+                                margin: 0 0 0 1rem;
+                                a {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    #depts {
+                        .list-containers {
+                            .dept-lists {
+                                li {
+                                    font-size: .85rem;
+                                    margin-left: -1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            table {
+                .table-header {
+                    th {
+                        font-size: .7rem;
+                    }
+                    td {
+                        font-size: .65rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint($tablet) {
+    .modal {
+        .modal-content {
+            #prev-text {
+                height: 27%;
+            }
+            #filter-text {
+                height: 40%;
+            }
+            .text {
+                padding: 1.25rem 1rem;
+                .close {
+                    font-size: 1.5rem;
+                }
+                .close:hover {
+                    font-size: 1.5rem;
+                }
+                #search {
+                    padding: .1rem 1rem;
+                }
+                h1 {
+                    font-size: 1.6rem;
+                }
+                p {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+    .landing {
+        .content {
+            .text {
+                p:first-child {
+                    font-size: 1.6rem;
+                }
+                .title {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+    .sguide {
+        .filter-nav {
+            h1 {
+                //font-size: 1.1rem;
+            }
+            p {
+                font-size: .85rem;
+            }
+        }
+        .options {
+            .sal-options {
+                h1 {
+                    //font-size: 1.1rem;
+                }
+                .ranges {
+                    div {
+                        p {
+                            font-size: .75rem;
+                        }
+                    }
+                }
+            }
+            .dept-options {
+                .deptandtitle-header {
+                    align-items: flex-end;
+                    h1 {
+                        //font-size: 1.2rem;
+                    }
+                    #dept-nav {
+                        a {
+                            margin-left: .5rem;
+                            font-size: .75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
