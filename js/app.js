@@ -115,12 +115,17 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     }
     $scope.search_data = function() {
         if($scope.search_term.length > 0) {
+            var terms = $scope.search_term.split(" ");
+            console.log(terms);
             result = _.filter(full_data, function(elt) {
-                a = elt.Employee.toLowerCase().includes($scope.search_term.toLowerCase());
-                b = elt.Department.toLowerCase().includes($scope.search_term.toLowerCase());
-                c = elt.Division.toLowerCase().includes($scope.search_term.toLowerCase());
-                d = elt.Title.toLowerCase().includes($scope.search_term.toLowerCase());
-                e = elt.Salary.toLowerCase().includes($scope.search_term.toLowerCase());
+                a = true; b = true; c = true; d = true; e = true;
+                terms.forEach(function (term, index, arr){
+                  a = a && elt.Employee.toLowerCase().includes(term.toLowerCase());
+                  b = b && elt.Department.toLowerCase().includes(term.toLowerCase());
+                  c = c && elt.Division.toLowerCase().includes(term.toLowerCase());
+                  d = d && elt.Title.toLowerCase().includes(term.toLowerCase());
+                  e = e && elt.Salary.toLowerCase().includes(term.toLowerCase());
+                }, this);
                 return a || b || c || d || e;
 
             });
