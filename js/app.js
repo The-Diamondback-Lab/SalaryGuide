@@ -142,6 +142,12 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             $scope.tableData = full_data.slice(0,10);
         }
     }
+    $scope.sortRows = function(sortByVal) {
+        curr_data = _.sortBy(curr_data, sortByVal);
+        $scope.page_count = 1;
+        $scope.max_pages = Math.ceil(curr_data.length / 10);
+        $scope.tableData = curr_data.slice(0,10);
+    };
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
