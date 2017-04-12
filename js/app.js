@@ -143,7 +143,15 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         }
     }
     $scope.sortRows = function(sortByVal) {
-        curr_data = _.sortBy(curr_data, sortByVal);
+        if(sortByVal == "Salary") {
+            curr_data = _.sortBy(curr_data, function(elt){
+                curr_salary = elt.Salary.replace(/[\$,]/g,'');
+                return curr_salary;
+            });
+        } else {
+            curr_data = _.sortBy(curr_data, sortByVal);
+        }
+        
         $scope.page_count = 1;
         $scope.max_pages = Math.ceil(curr_data.length / 10);
         $scope.tableData = curr_data.slice(0,10);
