@@ -118,15 +118,16 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             var terms = $scope.search_term.split(" ");
             console.log(terms);
             result = _.filter(full_data, function(elt) {
-                a = true; b = true; c = true; d = true; e = true;
+                find = true;
                 terms.forEach(function (term, index, arr){
-                  a = a && elt.Employee.toLowerCase().includes(term.toLowerCase());
-                  b = b && elt.Department.toLowerCase().includes(term.toLowerCase());
-                  c = c && elt.Division.toLowerCase().includes(term.toLowerCase());
-                  d = d && elt.Title.toLowerCase().includes(term.toLowerCase());
-                  e = e && elt.Salary.toLowerCase().includes(term.toLowerCase());
+                  a = elt.Employee.toLowerCase().includes(term.toLowerCase());
+                  b = elt.Department.toLowerCase().includes(term.toLowerCase());
+                  c = elt.Division.toLowerCase().includes(term.toLowerCase());
+                  d = elt.Title.toLowerCase().includes(term.toLowerCase());
+                  e = elt.Salary.toLowerCase().includes(term.toLowerCase());
+                  find = find && (a || b || c || d || e);
                 }, this);
-                return a || b || c || d || e;
+                return find;
 
             });
             curr_data = result;
@@ -135,7 +136,6 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             $scope.tableData = curr_data.slice(0,10);
         } else {
             //console.log(full_data.length);
-
             $scope.page_count = 1;
             curr_data = full_data;
             $scope.max_pages = Math.ceil(full_data.length / 10);
