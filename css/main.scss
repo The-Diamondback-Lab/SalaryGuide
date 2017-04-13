@@ -39,7 +39,7 @@ body {
     height: 100vh;
     color: $black;
     width: 100vw;
-    //overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -103,7 +103,7 @@ footer {
     flex-direction: column;
     width: 35%;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     margin: 0 0 .5rem 0;
     .social-links {
         margin: 0.25rem 0 0 0;
@@ -486,6 +486,21 @@ button {
                 font-size: 1rem;
             }
         }
+        .table-footer {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            .buttons {
+                width: 22vw;
+                justify-content: space-between;
+                button {
+                    background-color: $red;
+                }
+                button:hover {
+                    background-color: $disabled-red;
+                }
+            }
+        }
     }
 }
 
@@ -566,7 +581,13 @@ button {
         }
     }
     .sguide {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
         .table {
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
             .table-nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -579,7 +600,7 @@ button {
                         font-size: 1.5rem;
                     }
                     #filter {
-                        margin-left: .75rem;
+                        margin-right: 0;
                         text-align: right;
                         font-size: 1rem;
                     }
