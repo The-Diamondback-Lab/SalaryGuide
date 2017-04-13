@@ -33,7 +33,6 @@ header {
   flex-direction: column;
   width: 100vw;
   margin: .5rem 0 0 0;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: #fff; }
@@ -70,8 +69,8 @@ footer {
   border-top: thin solid #2e2e2e;
   flex-direction: column;
   width: 35%;
-  bottom: 0;
   position: absolute;
+  bottom: 0;
   margin: 0 0 .5rem 0; }
   footer .social-links {
     margin: 0.25rem 0 0 0; }
@@ -325,7 +324,7 @@ button {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 6rem 0 1rem; }
+    margin: 1rem 0; }
     .sguide .table .table-nav .title {
       align-items: flex-end;
       text-transform: uppercase;
@@ -365,7 +364,7 @@ button {
       text-transform: uppercase;
       width: 95vw; }
     .sguide .table table tr {
-      height: 5vh;
+      height: 4vh;
       border: none; }
     .sguide .table table tr:nth-child(odd) {
       background-color: #e1e1e1; }
@@ -373,11 +372,13 @@ button {
       background-color: #ebebeb; }
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
+      font-weight: 200;
       font-size: 1rem; }
   .sguide .table .table-footer {
     flex-direction: row;
     align-items: baseline;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-bottom: 1rem; }
     .sguide .table .table-footer .buttons {
       width: 22vw;
       justify-content: space-between; }
@@ -393,6 +394,7 @@ button {
     font-size: .9rem; }
 
   footer {
+    position: relative;
     width: 37%; }
     footer .social-links a {
       font-size: 1.35rem; }
@@ -449,7 +451,7 @@ button {
             margin-left: 0;
             font-size: 1.5rem; }
           .sguide .table .table-nav .title #filter {
-            margin-right: 0;
+            margin-left: 2.2rem;
             text-align: right;
             font-size: 1rem; }
         .sguide .table .table-nav #search {
@@ -470,10 +472,25 @@ button {
           margin-left: -1.5rem; }
       .sguide .table table .table-header th {
         font-size: .6rem; }
-      .sguide .table table .table-header td {
-        font-size: .5rem; } }
+      .sguide .table table tr td {
+        font-size: .6rem; }
+      .sguide .table .table-footer .buttons {
+        width: 30vw; }
+        .sguide .table .table-footer .buttons button {
+          font-size: .65rem;
+          text-align: center;
+          margin: 0;
+          padding: .25rem 1rem; }
+        .sguide .table .table-footer .buttons #prev {
+          width: 22vw;
+          margin-right: .5rem; }
+        .sguide .table .table-footer .buttons #next {
+          width: 15vw; }
+      .sguide .table .table-footer p {
+        font-size: .7rem; } }
 @media (min-width: 412px) and (max-width: 767px) {
   footer {
+    position: relative;
     width: 45%; }
     footer .social-links a {
       font-size: 2rem; }
@@ -531,8 +548,22 @@ button {
       margin-left: -1.5rem; }
   .sguide .table table .table-header th {
     font-size: .7rem; }
-  .sguide .table table .table-header td {
-    font-size: .65rem; } }
+  .sguide .table table td {
+    font-size: .6rem; }
+  .sguide .table .table-footer .buttons {
+    width: 30vw; }
+    .sguide .table .table-footer .buttons button {
+      font-size: .65rem;
+      text-align: center;
+      margin: 0;
+      padding: .25rem 1rem; }
+    .sguide .table .table-footer .buttons #prev {
+      width: 20vw;
+      margin-right: .5rem; }
+    .sguide .table .table-footer .buttons #next {
+      width: 15vw; }
+  .sguide .table .table-footer p {
+    font-size: .7rem; } }
 @media (min-width: 768px) and (max-width: 1024px) {
   .modal .modal-content #prev-text {
     height: 27%; }
@@ -564,6 +595,9 @@ button {
     align-items: flex-end; }
     .sguide .options .dept-options .deptandtitle-header #dept-nav a {
       margin-left: .5rem;
-      font-size: .75rem; } }
+      font-size: .75rem; }
+  .sguide .buttons button {
+    font-size: .8rem;
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
