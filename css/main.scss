@@ -39,11 +39,19 @@ body {
     height: 100vh;
     color: $black;
     width: 100vw;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 h1 {
     font-family: $oswald;
+}
+
+.upArrow {
+    background-image: url(../sources/caret-up.png);
+}
+
+.downArrows {
+    background-image: url(../sources/caret-down.png);
 }
 
 header {
@@ -53,6 +61,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: $white;
     p {
         border-bottom: thin solid $black;
         color: $black;
@@ -65,6 +74,7 @@ header {
         a {
             font-family: $oswald;
             text-decoration: none;
+            color: $black;
         }
         a:visited {
             color: $black;
@@ -440,10 +450,16 @@ button {
         }
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 90vw;
             text-align: center;
             th {
                 background-color: $red;
+                text-align: center;
+                font-family: $oswald;
+                font-size: 1.25rem;
+            }
+            th:hover {
+                background-color: $disabled-red;
             }
             th:last-child {
                 margin-right: 1rem;
@@ -464,6 +480,10 @@ button {
             }
             tr:nth-child(even) {
                 background-color: $grey;
+            }
+            td {
+                font-family: $prompt;
+                font-size: 1rem;
             }
         }
     }
@@ -676,6 +696,7 @@ button {
                 justify-content: flex-start;
                 .title {
                     justify-content: space-between;
+                    width: 90vw;
                     h1 {
                         margin-left: 0;
                     }

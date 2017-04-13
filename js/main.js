@@ -54,8 +54,6 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
-
-
     /*
     filter functions
     */

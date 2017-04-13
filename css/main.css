@@ -17,11 +17,16 @@
 body {
   height: 100vh;
   color: #2e2e2e;
-  width: 100vw;
-  overflow-x: hidden; }
+  width: 100vw; }
 
 h1 {
   font-family: "Oswald", sans-serif; }
+
+.upArrow {
+  background-image: url(../sources/caret-up.png); }
+
+.downArrows {
+  background-image: url(../sources/caret-down.png); }
 
 header {
   flex-direction: column;
@@ -29,7 +34,8 @@ header {
   margin: .5rem 0 0 0;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  background-color: #fff; }
   header p {
     border-bottom: thin solid #2e2e2e;
     color: #2e2e2e;
@@ -41,7 +47,8 @@ header {
     margin: 0; }
     header p a {
       font-family: "Oswald", sans-serif;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #2e2e2e; }
     header p a:visited {
       color: #2e2e2e; }
   header nav {
@@ -339,10 +346,15 @@ button {
         color: #d41d1d; }
   .sguide .table table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90vw;
     text-align: center; }
     .sguide .table table th {
-      background-color: #d41d1d; }
+      background-color: #d41d1d;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.25rem; }
+    .sguide .table table th:hover {
+      background-color: #cc4040; }
     .sguide .table table th:last-child {
       margin-right: 1rem; }
     .sguide .table table .table-header {
@@ -358,6 +370,9 @@ button {
       background-color: #e1e1e1; }
     .sguide .table table tr:nth-child(even) {
       background-color: #ebebeb; }
+    .sguide .table table td {
+      font-family: "Prompt", sans-serif;
+      font-size: 1rem; }
 
 @media (min-width: 320px) and (max-width: 411px) {
   header p {
@@ -471,7 +486,8 @@ button {
     align-items: flex-start;
     justify-content: flex-start; }
     .sguide .table .table-nav .title {
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 90vw; }
       .sguide .table .table-nav .title h1 {
         margin-left: 0; }
       .sguide .table .table-nav .title #filter {
