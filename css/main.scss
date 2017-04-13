@@ -62,7 +62,7 @@ header {
     //position: fixed;
     top: 0;
     left: 0;
-    background-color: $white;
+    //background-color: $white;
     p {
         border-bottom: thin solid $black;
         color: $black;
@@ -520,7 +520,8 @@ button {
         }
     }
     footer {
-        position: relative;
+        bottom: 0;
+        position: absolute;
         width: 37%;
         .social-links {
             a {
@@ -688,7 +689,8 @@ button {
 
 @include breakpoint($phoneTablets) {
     footer {
-        position: relative;
+        bottom: 0;
+        position: absolute;
         width: 45%;
         .social-links {
             a {

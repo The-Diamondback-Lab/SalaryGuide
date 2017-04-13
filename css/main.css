@@ -34,8 +34,7 @@ header {
   width: 100vw;
   margin: .5rem 0 0 0;
   top: 0;
-  left: 0;
-  background-color: #fff; }
+  left: 0; }
   header p {
     border-bottom: thin solid #2e2e2e;
     color: #2e2e2e;
@@ -394,7 +393,8 @@ button {
     font-size: .9rem; }
 
   footer {
-    position: relative;
+    bottom: 0;
+    position: absolute;
     width: 37%; }
     footer .social-links a {
       font-size: 1.35rem; }
@@ -490,7 +490,8 @@ button {
         font-size: .7rem; } }
 @media (min-width: 412px) and (max-width: 767px) {
   footer {
-    position: relative;
+    bottom: 0;
+    position: absolute;
     width: 45%; }
     footer .social-links a {
       font-size: 2rem; }
