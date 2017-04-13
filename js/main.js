@@ -54,18 +54,9 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
-    var arrows = [" ", "&#9650;", " &#9660;"];
-    var clicks = 0;
     $('#employee').click(function () {
-        click++;
-        if (clicks = 1) {
-            $('.employee').text() = arrows[0];
-        } else if (clicks = 2) {
-            $('.employee').text() = arrows[1];
-        } else if (clicks = 3) {
-            $('.employee').text() = arrows[2];
-            clicks = 0;
-        }
+        icon = $(this).find("i");
+        icon.toggleClass("fa fa-sort-asc fa fa-sort-desc");
     });
 
     /*

@@ -54,7 +54,10 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
-
+    $('#employee').click(function () {
+        icon = $(this).find("i");
+        icon.toggleClass("fa fa-sort-asc fa fa-sort-desc");
+    });
 
     /*
     filter functions
