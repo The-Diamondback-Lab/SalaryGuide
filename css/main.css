@@ -599,5 +599,9 @@ button {
   .sguide .buttons button {
     font-size: .8rem;
     text-align: center; } }
+@media (min-width: 1025px) and (max-width: 1080px) {
+  table .table-header th a {
+    font-size: 1.6rem;
+    margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */
