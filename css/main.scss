@@ -4,8 +4,8 @@ $black: #2e2e2e;
 $red: #d41d1d;
 $disabled-red: #cc4040;
 $white: #fff;
-$grey: #ebebeb;
-$darkgrey: #e1e1e1;
+$grey: #e2e2e2;
+$darkgrey: #d3d3d3;
 $oswald: "Oswald",
 sans-serif;
 $prompt: "Prompt",
@@ -461,6 +461,7 @@ button {
             }
             th:hover {
                 background-color: $disabled-red;
+                cursor: default;
             }
             th:last-child {
                 margin-right: 1rem;
@@ -486,6 +487,10 @@ button {
                 font-family: $prompt;
                 font-weight: 200;
                 font-size: 1rem;
+            }
+            tr:hover {
+                background-color: $white;
+                ///rgba(212, 29, 29, .7);
             }
         }
         .table-footer {
