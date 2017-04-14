@@ -86,6 +86,16 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     $scope.tableData = [];
     var full_data = [];
     var curr_data = [];
+    // An array to hold status of each row if the table is being sorted by it
+    // NOTE #1 for values: 0 - not being sorted by that row, 1 - sorted ascending by that row, 2 - sorting descending by that row
+    // NOTE #2 for indices: 0 - employee/name, 1 - department, 2 - title, 3 - salary
+    $scope.sortRowArray = [0,0,0,0];
+    $scope.sortRowObj = {
+        "Employee":0,
+        "Department":0,
+        "Title":0,
+        "Salary":0
+    };
     if ($stateParams.year == null){
       $stateParams.year = 2017;
     }
@@ -143,7 +153,9 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         }
     }
     $scope.sortRows = function(sortByVal) {
+        
         if(sortByVal == "Salary") {
+            
             curr_data = _.sortBy(curr_data, function(elt){
                 curr_salary = elt.Salary.replace(/[\$,]/g,'');
                 return curr_salary;
@@ -151,7 +163,49 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         } else {
             curr_data = _.sortBy(curr_data, sortByVal);
         }
-        
+        if(sortByVal == "Employee") {
+            $scope.sortRowArray.fill(0,1,4)
+            if($scope.sortRowArray[0] != 1) {
+                
+                $scope.sortRowArray[0] = 1;
+            } else {
+                curr_data = curr_data.reverse();
+                $scope.sortRowArray[0] = 2;
+            }
+        }
+        if(sortByVal == "Title") {
+            //console.log("Hello")
+            $scope.sortRowArray.fill(0,0,2);
+            $scope.sortRowArray.fill(0,3,4);
+            if($scope.sortRowArray[2] != 1){
+                $scope.sortRowArray[2] = 1
+            } else {
+                
+                curr_data = curr_data.reverse()
+                $scope.sortRowArray[2] = 2;
+            }
+        }
+        if(sortByVal == "Department") {
+            $scope.sortRowArray.fill(0,0,1);
+            $scope.sortRowArray.fill(0,2,4);
+            if($scope.sortRowArray[1] != 1) {
+                $scope.sortRowArray[1] = 1
+            } else {
+                curr_data = curr_data.reverse();
+                $scope.sortRowArray[1] = 2;
+            }
+            
+        } 
+        if(sortByVal == "Salary") {
+            $scope.sortRowArray.fill(0,0,3);
+            if($scope.sortRowArray[3] != 1) {
+                $scope.sortRowArray[3] = 1;
+            } else {
+                curr_data = curr_data.reverse();
+                $scope.sortRowArray[3] = 2;
+            }
+        }
+        //console.log($scope.sortRowArray);
         $scope.page_count = 1;
         $scope.max_pages = Math.ceil(curr_data.length / 10);
         $scope.tableData = curr_data.slice(0,10);
