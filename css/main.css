@@ -75,7 +75,7 @@ footer {
   border-top: thin solid #2e2e2e;
   flex-direction: column;
   width: 35%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   margin: 0 0 .5rem 0; }
   footer .social-links {
@@ -161,9 +161,9 @@ button {
           font-weight: 200;
           color: #2e2e2e;
           font-size: 5rem;
-          margin: 0 3rem 4rem 0;
+          margin: 0 3rem 2.5rem 0;
           padding: 0;
-          position: fixed;
+          position: absolute;
           top: 0;
           right: 0; }
         .modal .modal-content .text .modal-header .close:hover {
@@ -392,7 +392,7 @@ button {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-    padding-bottom: 1rem; }
+    margin-bottom: 1.5rem; }
     .sguide .table .table-footer .buttons {
       width: 22vw;
       justify-content: space-between; }

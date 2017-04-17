@@ -103,7 +103,7 @@ footer {
     border-top: thin solid $black;
     flex-direction: column;
     width: 35%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin: 0 0 .5rem 0;
     .social-links {
@@ -202,9 +202,9 @@ button {
                     font-weight: 200;
                     color: $black;
                     font-size: 5rem;
-                    margin: 0 3rem 4rem 0;
+                    margin: 0 3rem 2.5rem 0;
                     padding: 0;
-                    position: fixed;
+                    position: absolute;
                     top: 0;
                     right: 0;
                 }
@@ -496,14 +496,13 @@ button {
             }
             tr:hover {
                 background-color: $white;
-                ///rgba(212, 29, 29, .7);
             }
         }
         .table-footer {
             flex-direction: row;
             align-items: baseline;
             justify-content: space-between;
-            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
             .buttons {
                 width: 22vw;
                 justify-content: space-between;
