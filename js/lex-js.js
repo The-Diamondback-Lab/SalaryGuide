@@ -16,6 +16,14 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
+    $('.modal-content').click(function () {
+        $('#about').css('font-weight', 200);
+        $('#abt-modal').css('display', 'none');
+        $('#previous').css('font-weight', 200);
+        $('#prev-modal').css('display', 'none');
+        $('#filter-modal').css('display', 'none');
+    });
+
     $('#previous').click(function () {
         $('#previous').css('font-weight', 400);
         $('#prev-modal').css('display', 'block');
