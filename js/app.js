@@ -151,25 +151,18 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             $scope.max_pages = Math.ceil(full_data.length / 10);
             $scope.tableData = full_data.slice(0,10);
         }
+        sortData();
     }
     $scope.sortRows = function(sortByVal) {
         
-        if(sortByVal == "Salary") {
-            
-            curr_data = _.sortBy(curr_data, function(elt){
-                curr_salary = elt.Salary.replace(/[\$,]/g,'');
-                return curr_salary;
-            });
-        } else {
-            curr_data = _.sortBy(curr_data, sortByVal);
-        }
+        
         if(sortByVal == "Employee") {
             $scope.sortRowArray.fill(0,1,4)
             if($scope.sortRowArray[0] != 1) {
                 
                 $scope.sortRowArray[0] = 1;
             } else {
-                curr_data = curr_data.reverse();
+                
                 $scope.sortRowArray[0] = 2;
             }
         }
@@ -181,7 +174,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
                 $scope.sortRowArray[2] = 1
             } else {
                 
-                curr_data = curr_data.reverse()
+                
                 $scope.sortRowArray[2] = 2;
             }
         }
@@ -191,7 +184,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             if($scope.sortRowArray[1] != 1) {
                 $scope.sortRowArray[1] = 1
             } else {
-                curr_data = curr_data.reverse();
+                
                 $scope.sortRowArray[1] = 2;
             }
             
@@ -201,15 +194,50 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             if($scope.sortRowArray[3] != 1) {
                 $scope.sortRowArray[3] = 1;
             } else {
-                curr_data = curr_data.reverse();
+                
                 $scope.sortRowArray[3] = 2;
             }
         }
         //console.log($scope.sortRowArray);
+       sortData()
+    };
+    // Call this function after changing the sort array, it will sort automatically based upon the array data
+    function sortData() {
+        namesArray = ["Employee","Department","Title","Salary"];
+        sortIndex = -1;
+        sortVal = 0;
+        for(i = 0; i < $scope.sortRowArray.length; i++) {
+            if($scope.sortRowArray[i] != 0) {
+                sortIndex = i;
+                sortVal = $scope.sortRowArray[i]
+                break;
+            }
+        }
+        if(sortIndex == -1) {
+            return;
+        }
+        name = namesArray[sortIndex];
+        
+        if(name == "Salary") {
+            curr_data = _.sortBy(curr_data, function(elt){
+                curr_salary = elt.Salary.replace(/[\$,]/g,'');
+                return parseInt(curr_salary);
+            });
+        } else {
+            curr_data = _.sortBy(curr_data, function(elt) {
+                return elt[name].toLowerCase();
+            });
+        }
+        
+        curr_data = sortVal == 2 ? curr_data.reverse() : curr_data;
+        resetTable();
+    }
+    
+    function resetTable() {
         $scope.page_count = 1;
         $scope.max_pages = Math.ceil(curr_data.length / 10);
         $scope.tableData = curr_data.slice(0,10);
-    };
+    }
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
