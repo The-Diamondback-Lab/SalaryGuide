@@ -150,7 +150,7 @@ button {
     font-weight: 300;
 }
 
- ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     color: $black;
     font-family: $prompt;
     font-weight: 300;
@@ -177,7 +177,7 @@ button {
         height: 100%;
         width: 100%;
         #prev-text {
-            height: 35%;
+            height: 40%;
             padding: 2rem 3rem;
             .modal-header {
                 margin-bottom: 2rem;
@@ -466,6 +466,7 @@ button {
                 text-align: center;
                 font-family: $oswald;
                 font-size: 1.25rem;
+                width: 30%;
             }
             th:hover {
                 background-color: $disabled-red;
@@ -495,6 +496,10 @@ button {
                 font-family: $prompt;
                 font-weight: 200;
                 font-size: 1rem;
+                margin: 0;
+            }
+            #tableRow {
+                width: 10%;
             }
             tr:hover {
                 background-color: $white;
@@ -876,6 +881,7 @@ button {
 
 @include breakpoint($phoneTablets) {
     footer {
+        margin: 100% 0 0 0;
         .social-links {
             a {
                 font-size: 2rem;
@@ -885,7 +891,7 @@ button {
     .modal {
         .modal-content {
             #prev-text {
-                height: 40%;
+                height: 45%;
             }
             .text {
                 width: 85%;
@@ -1020,7 +1026,7 @@ button {
     .modal {
         .modal-content {
             #prev-text {
-                height: 27%;
+                height: 40%;
             }
             #filter-text {
                 height: 40%;

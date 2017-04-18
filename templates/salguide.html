@@ -12,7 +12,7 @@
                 <input type="text" ng-model="search_term" ng-change="search_data()" type="search" placeholder="SEARCH" id="search">
             </div>
 
-            <div ng-if="dataLoading" class = "center-page"><img src="sources/loading.gif" /></div>
+            <div ng-if="dataLoading" class="center-page"><img src="sources/loading.gif" /></div>
 
             <!--
 <div class="filter center toggleDisplay">
@@ -318,8 +318,8 @@
             <table ng-if="dataLoading == false">
                 <tr class="table-header">
                     <!--                    <th><i class="fa fa-check-square-o" aria-hidden="true"></i></th>-->
-                    <th>
-                        <a id="employee" ng-click="sortRows('Employee')">
+                    <th ng-click="sortRows('Employee')">
+                        <a id="employee">
                             Employee
                         
                             <span ng-show="sortRowArray[0] == 1">
@@ -328,11 +328,11 @@
                             <span ng-show="sortRowArray[0] == 2">
                                 ▼
                             </span>
-                        </a>  
+                        </a>
                         <i></i>
                     </th>
-                    <th>
-                        <a id="department" ng-click="sortRows('Department')">
+                    <th ng-click="sortRows('Department')">
+                        <a id="department">
                             Department
                             <span ng-show="sortRowArray[1] == 1">
                                 ▲
@@ -340,11 +340,11 @@
                             <span ng-show="sortRowArray[1] == 2">
                                 ▼
                             </span>
-                        </a> 
+                        </a>
                         <i></i>
                     </th>
-                    <th>
-                        <a id="titleSort" ng-click="sortRows('Title')">
+                    <th ng-click="sortRows('Title')">
+                        <a id="titleSort">
                             Title
                             <span ng-show="sortRowArray[2] == 1">
                                 ▲
@@ -352,11 +352,11 @@
                             <span ng-show="sortRowArray[2] == 2">
                                 ▼
                             </span>
-                        </a> 
+                        </a>
                         <i></i>
                     </th>
-                    <th>
-                        <a id="salSort" ng-click="sortRows('Salary')">
+                    <th ng-click="sortRows('Salary')">
+                        <a id="salSort">
                             Salary
                             <span ng-show="sortRowArray[3] == 1">
                                 ▲
@@ -364,7 +364,7 @@
                             <span ng-show="sortRowArray[3] == 2">
                                 ▼
                             </span>
-                        </a> 
+                        </a>
                         <i></i>
                     </th>
                 </tr>
@@ -378,7 +378,7 @@
                     <td>
                         {{row.Employee}}
                     </td>
-                    <td>
+                    <td id="deptRow">
                         {{row.Department}}
                     </td>
                     <td>

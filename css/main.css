@@ -131,7 +131,7 @@ button {
     height: 100%;
     width: 100%; }
     .modal .modal-content #prev-text {
-      height: 35%;
+      height: 40%;
       padding: 2rem 3rem; }
       .modal .modal-content #prev-text .modal-header {
         margin-bottom: 2rem; }
@@ -358,7 +358,8 @@ button {
       background-color: #d41d1d;
       text-align: center;
       font-family: "Oswald", sans-serif;
-      font-size: 1.25rem; }
+      font-size: 1.25rem;
+      width: 30%; }
     .sguide .table table th:hover {
       background-color: #cc4040;
       cursor: default; }
@@ -380,7 +381,10 @@ button {
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
       font-weight: 200;
-      font-size: 1rem; }
+      font-size: 1rem;
+      margin: 0; }
+    .sguide .table table #tableRow {
+      width: 10%; }
     .sguide .table table tr:hover {
       background-color: #fff; }
   .sguide .table .table-footer {
@@ -594,11 +598,13 @@ button {
       .sguide .table .table-footer p {
         font-size: .7rem; } }
 @media (min-width: 413px) and (max-width: 767px) {
-  footer .social-links a {
-    font-size: 2rem; }
+  footer {
+    margin: 100% 0 0 0; }
+    footer .social-links a {
+      font-size: 2rem; }
 
   .modal .modal-content #prev-text {
-    height: 40%; }
+    height: 45%; }
   .modal .modal-content .text {
     width: 85%;
     padding: 1.25rem 1.75rem; }
@@ -668,7 +674,7 @@ button {
     font-size: .7rem; } }
 @media (min-width: 768px) and (max-width: 1024px) {
   .modal .modal-content #prev-text {
-    height: 27%; }
+    height: 40%; }
   .modal .modal-content #filter-text {
     height: 40%; }
   .modal .modal-content .text {
