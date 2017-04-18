@@ -65,19 +65,21 @@ header {
       cursor: default; }
 
 footer {
-  border-top: thin solid #2e2e2e;
   flex-direction: column;
-  width: 35%;
-  position: fixed;
+  width: 100%;
+  position: absolute;
   bottom: 0;
+  left: 0;
   margin: 0 0 .5rem 0; }
   footer .social-links {
-    margin: 0.25rem 0 0 0; }
+    margin: 0rem .25rem 0 0;
+    border-top: thin solid #2e2e2e;
+    width: 37.5%; }
     footer .social-links a {
       color: #2e2e2e;
       font-size: 2rem;
       text-align: center;
-      margin: 0 0.25rem; }
+      margin: .25rem 0.25rem 0 .25rem; }
     footer .social-links a:hover {
       color: #d41d1d;
       font-size: 2.15rem; }
@@ -400,12 +402,8 @@ button {
   header nav a {
     font-size: .9rem; }
 
-  footer {
-    bottom: 0;
-    position: relative;
-    width: 37%; }
-    footer .social-links a {
-      font-size: 1.35rem; }
+  footer .social-links a {
+    font-size: 1.35rem; }
 
   .modal .modal-content #prev-text {
     height: 47.5%;
@@ -504,12 +502,8 @@ button {
   header nav a {
     font-size: .9rem; }
 
-  footer {
-    bottom: 0;
-    position: absolute;
-    width: 37%; }
-    footer .social-links a {
-      font-size: 1.35rem; }
+  footer .social-links a {
+    font-size: 1.35rem; }
 
   .modal .modal-content #prev-text {
     height: 47.5%;
@@ -600,12 +594,8 @@ button {
       .sguide .table .table-footer p {
         font-size: .7rem; } }
 @media (min-width: 413px) and (max-width: 767px) {
-  footer {
-    bottom: 0;
-    position: absolute;
-    width: 45%; }
-    footer .social-links a {
-      font-size: 2rem; }
+  footer .social-links a {
+    font-size: 2rem; }
 
   .modal .modal-content #prev-text {
     height: 40%; }
@@ -660,8 +650,8 @@ button {
       margin-left: -1.5rem; }
   .sguide .table table .table-header th {
     font-size: .7rem; }
-  .sguide .table table td {
-    font-size: .65rem; }
+  .sguide .table table tr td {
+    font-size: .7rem; }
   .sguide .table .table-footer .buttons {
     width: 30vw; }
     .sguide .table .table-footer .buttons button {
@@ -707,15 +697,8 @@ button {
     .sguide .options .dept-options .deptandtitle-header #dept-nav a {
       margin-left: .5rem;
       font-size: .75rem; }
-  .sguide .buttons button {
+  .sguide .table-footer .buttons button {
     font-size: .8rem;
     text-align: center; } }
-@media (min-width: 1025px) and (max-width: 1080px) {
-  .modal .modal-content .text {
-    height: 35%; }
-
-  table .table-header th a {
-    font-size: 1.6rem;
-    margin: 0; } }
 
 /*# sourceMappingURL=main.css.map */

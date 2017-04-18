@@ -15,7 +15,6 @@ $phones: 0px 359px;
 $phones2: 360px 412px;
 $phoneTablets: 413px 767px;
 $tablet: 768px 1024px;
-$larger: 1025px 1080px;
 //general styles
 * {
     box-sizing: border-box;
@@ -101,19 +100,21 @@ header {
 }
 
 footer {
-    border-top: thin solid $black;
     flex-direction: column;
-    width: 35%;
-    position: fixed;
+    width: 100%;
+    position: absolute;
     bottom: 0;
+    left: 0;
     margin: 0 0 .5rem 0;
     .social-links {
-        margin: 0.25rem 0 0 0;
+        margin: 0rem .25rem 0 0;
+        border-top: thin solid $black;
+        width: 37.5%;
         a {
             color: $black;
             font-size: 2rem;
             text-align: center;
-            margin: 0 0.25rem;
+            margin: .25rem 0.25rem 0 .25rem;
         }
         a:hover {
             color: $red;
@@ -531,9 +532,6 @@ button {
         }
     }
     footer {
-        bottom: 0;
-        position: relative;
-        width: 37%;
         .social-links {
             a {
                 font-size: 1.35rem;
@@ -712,9 +710,6 @@ button {
         }
     }
     footer {
-        bottom: 0;
-        position: absolute;
-        width: 37%;
         .social-links {
             a {
                 font-size: 1.35rem;
@@ -881,9 +876,6 @@ button {
 
 @include breakpoint($phoneTablets) {
     footer {
-        bottom: 0;
-        position: absolute;
-        width: 45%;
         .social-links {
             a {
                 font-size: 2rem;
@@ -993,8 +985,10 @@ button {
                         font-size: .7rem;
                     }
                 }
-                td {
-                    font-size: .65rem;
+                tr {
+                    td {
+                        font-size: .7rem;
+                    }
                 }
             }
             .table-footer {
@@ -1099,29 +1093,11 @@ button {
                 }
             }
         }
-        .buttons {
-            button {
-                font-size: .8rem;
-                text-align: center;
-            }
-        }
-    }
-}
-
-@include breakpoint($larger) {
-    .modal {
-        .modal-content {
-            .text {
-                height: 35%;
-            }
-        }
-    }
-    table {
-        .table-header {
-            th {
-                a {
-                    font-size: 1.6rem;
-                    margin: 0;
+        .table-footer {
+            .buttons {
+                button {
+                    font-size: .8rem;
+                    text-align: center;
                 }
             }
         }
