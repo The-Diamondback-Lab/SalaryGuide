@@ -58,11 +58,9 @@ h1 {
 header {
     flex-direction: column;
     width: 100vw;
-    margin: .5rem 0 0 0;
-    //position: fixed;
+    margin: .5rem 0 .5rem 0;
+    position: relative;
     top: 0;
-    left: 0;
-    //background-color: $white;
     p {
         border-bottom: thin solid $black;
         color: $black;
@@ -101,10 +99,9 @@ header {
 
 footer {
     flex-direction: column;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    width: 100vw;
+    position: fixed;
+    //bottom: 0;
     margin: 0 0 .5rem 0;
     .social-links {
         margin: 0rem .25rem 0 0;
@@ -263,14 +260,8 @@ button {
     flex-direction: column;
     .content {
         flex-direction: row;
-        margin: 6.5rem 0;
-        position: fixed;
         width: 100vw;
-        top: 37.5%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        margin-top: 7.5%;
         .text {
             margin: 0 1rem;
             p:first-child {
@@ -323,6 +314,7 @@ button {
 //begin salary guide page styles
 .sguide {
     flex-direction: column;
+    justify-content: flex-start;
     h1 {
         font-family: $oswald;
         color: $red;
@@ -461,6 +453,8 @@ button {
             border-collapse: collapse;
             width: 90vw;
             text-align: center;
+            position: relative;
+            //margin-top: 85%;
             th {
                 background-color: $red;
                 text-align: center;
@@ -760,6 +754,7 @@ button {
     }
     .landing {
         .content {
+            top: 50;
             .text {
                 p:first-child {
                     font-size: 1.4rem;
@@ -881,7 +876,6 @@ button {
 
 @include breakpoint($phoneTablets) {
     footer {
-        margin: 100% 0 0 0;
         .social-links {
             a {
                 font-size: 2rem;
@@ -1052,6 +1046,7 @@ button {
     }
     .landing {
         .content {
+            margin-top: 37.5%;
             .text {
                 p:first-child {
                     font-size: 1.6rem;

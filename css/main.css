@@ -32,9 +32,9 @@ h1 {
 header {
   flex-direction: column;
   width: 100vw;
-  margin: .5rem 0 0 0;
-  top: 0;
-  left: 0; }
+  margin: .5rem 0 .5rem 0;
+  position: relative;
+  top: 0; }
   header p {
     border-bottom: thin solid #2e2e2e;
     color: #2e2e2e;
@@ -66,10 +66,8 @@ header {
 
 footer {
   flex-direction: column;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  width: 100vw;
+  position: fixed;
   margin: 0 0 .5rem 0; }
   footer .social-links {
     margin: 0rem .25rem 0 0;
@@ -201,14 +199,8 @@ button {
   flex-direction: column; }
   .landing .content {
     flex-direction: row;
-    margin: 6.5rem 0;
-    position: fixed;
     width: 100vw;
-    top: 37.5%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    margin-top: 7.5%; }
     .landing .content .text {
       margin: 0 1rem; }
       .landing .content .text p:first-child {
@@ -247,7 +239,8 @@ button {
       width: 45%; }
 
 .sguide {
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start; }
   .sguide h1 {
     font-family: "Oswald", sans-serif;
     color: #d41d1d;
@@ -353,7 +346,8 @@ button {
   .sguide .table table {
     border-collapse: collapse;
     width: 90vw;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .sguide .table table th {
       background-color: #d41d1d;
       text-align: center;
@@ -531,13 +525,15 @@ button {
     .modal .modal-content .text p {
       font-size: .1rem; }
 
-  .landing .content .text p:first-child {
-    font-size: 1.4rem; }
-  .landing .content .text .title {
-    font-size: 3rem; }
-  .landing .content .text p:last-child {
-    font-size: 1.75rem;
-    padding: 0.3rem 0.2rem 0.3rem 0; }
+  .landing .content {
+    top: 50; }
+    .landing .content .text p:first-child {
+      font-size: 1.4rem; }
+    .landing .content .text .title {
+      font-size: 3rem; }
+    .landing .content .text p:last-child {
+      font-size: 1.75rem;
+      padding: 0.3rem 0.2rem 0.3rem 0; }
   .landing img {
     display: none; }
 
@@ -598,10 +594,8 @@ button {
       .sguide .table .table-footer p {
         font-size: .7rem; } }
 @media (min-width: 413px) and (max-width: 767px) {
-  footer {
-    margin: 100% 0 0 0; }
-    footer .social-links a {
-      font-size: 2rem; }
+  footer .social-links a {
+    font-size: 2rem; }
 
   .modal .modal-content #prev-text {
     height: 45%; }
@@ -689,10 +683,12 @@ button {
     .modal .modal-content .text p {
       font-size: .75rem; }
 
-  .landing .content .text p:first-child {
-    font-size: 1.6rem; }
-  .landing .content .text .title {
-    font-size: 3.5rem; }
+  .landing .content {
+    margin-top: 37.5%; }
+    .landing .content .text p:first-child {
+      font-size: 1.6rem; }
+    .landing .content .text .title {
+      font-size: 3.5rem; }
 
   .sguide .filter-nav p {
     font-size: .85rem; }
