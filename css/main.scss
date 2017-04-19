@@ -36,6 +36,13 @@ $tablet: 768px 1024px;
     justify-content: center;
 }
 
+.center-page{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
     height: 100vh;
     color: $black;
