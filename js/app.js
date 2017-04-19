@@ -89,7 +89,8 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     // An array to hold status of each row if the table is being sorted by it
     // NOTE #1 for values: 0 - not being sorted by that row, 1 - sorted ascending by that row, 2 - sorting descending by that row
     // NOTE #2 for indices: 0 - employee/name, 1 - department, 2 - title, 3 - salary
-    $scope.sortRowArray = [0,0,0,0];
+    $scope.sortRowArray = [1,0,0,0];
+    sortData();
     $scope.sortRowObj = {
         "Employee":0,
         "Department":0,
