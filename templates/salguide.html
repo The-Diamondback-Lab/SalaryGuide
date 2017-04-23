@@ -392,11 +392,17 @@
             </table>
 
             <div class="table-footer center" ng-if="dataLoading == false">
-                <div class="buttons center">
-                    <button id="prev" ng-disalbed="page_count == 1" ng-click="prev_page()">Previous</button>
-                    <button id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">Next</button>
-                </div>
+                <!--
+<div class="buttons center">
+    <button id="prev" ng-disalbed="page_count == 1" ng-click="prev_page()">Previous</button>
+    <button id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">Next</button>
+</div>
+-->
+                <i class="fa fa-angle-double-left" aria-hidden="true" id="prev" ng-disalbed="page_count == 1" ng-click="prev_page()"></i>
+
                 <p>Page {{page_count}} of {{max_pages}}</p>
+
+                <i class="fa fa-angle-double-right" aria-hidden="true" id="next" ng-disabled="page_count == max_pages" ng-click="next_page()"></i>
             </div>
 
         </div>
