@@ -9,17 +9,17 @@ $(document).ready(function () {
     });
 
     $('.close').click(function () {
-        //$('#about').css('font-weight', 200);
+        $('#about').css('font-weight', 200);
         $('#abt-modal').css('display', 'none');
-        //$('#previous').css('font-weight', 200);
+        $('#previous').css('font-weight', 200);
         $('#prev-modal').css('display', 'none');
         $('#filter-modal').css('display', 'none');
     });
 
     $('.modal-content').click(function () {
-        //$('#about').css('font-weight', 200);
+        $('#about').css('font-weight', 200);
         $('#abt-modal').css('display', 'none');
-        //$('#previous').css('font-weight', 200);
+        $('#previous').css('font-weight', 200);
         $('#prev-modal').css('display', 'none');
         $('#filter-modal').css('display', 'none');
     });
