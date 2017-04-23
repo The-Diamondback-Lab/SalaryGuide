@@ -4,8 +4,8 @@ $black: #2e2e2e;
 $red: #d41d1d;
 $disabled-red: #cc4040;
 $white: #fff;
-$grey: #e2e2e2;
-$darkgrey: #d3d3d3;
+$grey: #ece9e9;
+$darkgrey: #efefef;
 $oswald: "Oswald",
 sans-serif;
 $prompt: "Prompt",
@@ -15,10 +15,6 @@ sans-serif;
 //$phones2: 360px 600px;
 //$phoneTablets: 601px 767px;
 //$tablet: 769px 1024px;
-$landscape-phones: max-width 480px;
-$portrait-tablets: max-width 768px;
-$landscape-tablets: 769px 979px;
-$large: min-width 1200px;
 //general styles
 * {
     box-sizing: border-box;
@@ -278,7 +274,7 @@ button {
     .content {
         flex-direction: row;
         width: 100vw;
-        //margin-top: 7.5%;
+        height: 100vh;
         .text {
             margin: 0 1rem;
             p:first-child {
@@ -513,7 +509,8 @@ button {
                 width: 10%;
             }
             tr:hover {
-                background-color: $white;
+                background-color: #f6ecec;
+                cursor: default;
             }
         }
         .table-footer {
@@ -521,19 +518,25 @@ button {
             align-items: baseline;
             justify-content: space-between;
             margin-bottom: 1.5rem;
-            i {
-                color: $red;
+            width: 90vw;
+            .buttons {
+                //width: 22vw;
+                justify-content: space-between;
+                button {
+                    background-color: $red;
+                    text-align: center;
+                    margin: 0;
+                }
+                button:hover {
+                    background-color: $disabled-red;
+                }
+                #prev {
+                    margin-right: .5rem;
+                }
+                #next {
+                    margin-left: .5rem;
+                }
             }
-            //            .buttons {
-            //                width: 22vw;
-            //                justify-content: space-between;
-            //                button {
-            //                    background-color: $red;
-            //                }
-            //                button:hover {
-            //                    background-color: $disabled-red;
-            //                }
-            //            }
         }
     }
 }
@@ -572,6 +575,19 @@ button {
             }
         }
     }
+    .landing {
+        .content {
+            //margin-top: 37.5%;
+            .text {
+                p:first-child {
+                    font-size: 1.6rem;
+                }
+                .title {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
 }
 
 @include breakpoint(max-width 910px) {
@@ -594,6 +610,10 @@ button {
 }
 
 @include breakpoint(max-width 865px) {
+    //    .wrapper {
+    //        background-image: url(../sources/umd-tp.png);
+    //        background-size: cover;
+    //    }
     .modal {
         .modal-content {
             .text {
@@ -612,6 +632,8 @@ button {
     }
     .landing {
         .content {
+            background-image: url(../sources/umd-tp.png);
+            background-size: cover;
             .text {
                 p:first-child {
                     font-size: 1.75rem;
@@ -698,31 +720,21 @@ button {
             table {
                 .table-header {
                     th {
-                        font-size: .75rem;
+                        font-size: .8rem;
                     }
                 }
                 tr {
                     td {
-                        font-size: .65rem;
+                        font-size: .8rem;
                     }
                 }
             }
             .table-footer {
-                margin-bottom: .25rem;
+                margin: .25rem 0;
                 .buttons {
-                    width: 30vw;
                     button {
-                        font-size: .75rem;
-                        text-align: center;
-                        margin: 0;
-                        padding: .25rem 1rem;
-                    }
-                    #prev {
-                        width: 25vw;
-                        margin-right: .5rem;
-                    }
-                    #next {
-                        width: 20vw;
+                        font-size: .77rem;
+                        padding: .5rem 1rem;
                     }
                 }
                 p {
@@ -790,6 +802,13 @@ button {
 @include breakpoint(max-width 575px) {
     .modal {
         .modal-content {
+            #prev-text {
+                .text2 {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
             .text {
                 height: 67%;
                 width: 85%;
@@ -926,10 +945,6 @@ button {
 }
 
 @include breakpoint(max-width 530px) {
-    body {
-        background-image: url(../sources/umd-tp.png);
-        background-size: cover;
-    }
     header {
         p {
             font-size: 1.5rem;
@@ -953,6 +968,9 @@ button {
                 height: 35%;
                 padding: 1.75rem 1.5rem;
                 .text2 {
+                    h1 {
+                        font-size: 1.25rem;
+                    }
                     .links {
                         a {
                             font-size: .8rem;

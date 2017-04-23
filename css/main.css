@@ -103,7 +103,7 @@ button {
 #search {
   width: 20%;
   outline: none;
-  border: 3px solid #d3d3d3;
+  border: 3px solid #efefef;
   border-radius: 2rem;
   padding: .25rem 1rem; }
 
@@ -192,7 +192,8 @@ button {
   flex-direction: column; }
   .landing .content {
     flex-direction: row;
-    width: 100vw; }
+    width: 100vw;
+    height: 100vh; }
     .landing .content .text {
       margin: 0 1rem; }
       .landing .content .text p:first-child {
@@ -361,9 +362,9 @@ button {
       height: 4vh;
       border: none; }
     .sguide .table table tr:nth-child(odd) {
-      background-color: #d3d3d3; }
+      background-color: #efefef; }
     .sguide .table table tr:nth-child(even) {
-      background-color: #e2e2e2; }
+      background-color: #ece9e9; }
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
       font-weight: 200;
@@ -372,14 +373,26 @@ button {
     .sguide .table table #tableRow {
       width: 10%; }
     .sguide .table table tr:hover {
-      background-color: #fff; }
+      background-color: #f6ecec;
+      cursor: default; }
   .sguide .table .table-footer {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: 1.5rem; }
-    .sguide .table .table-footer i {
-      color: #d41d1d; }
+    margin-bottom: 1.5rem;
+    width: 90vw; }
+    .sguide .table .table-footer .buttons {
+      justify-content: space-between; }
+      .sguide .table .table-footer .buttons button {
+        background-color: #d41d1d;
+        text-align: center;
+        margin: 0; }
+      .sguide .table .table-footer .buttons button:hover {
+        background-color: #cc4040; }
+      .sguide .table .table-footer .buttons #prev {
+        margin-right: .5rem; }
+      .sguide .table .table-footer .buttons #next {
+        margin-left: .5rem; }
 
 @media (max-width: 1095px) {
   .modal .modal-content .text .text2 p {
@@ -390,7 +403,12 @@ button {
   .modal .modal-content .text .text2 p {
     font-size: .85rem; }
   .modal .modal-content .text .close {
-    font-size: .82rem; } }
+    font-size: .82rem; }
+
+  .landing .content .text p:first-child {
+    font-size: 1.6rem; }
+  .landing .content .text .title {
+    font-size: 3.5rem; } }
 @media (max-width: 910px) {
   .modal .modal-content .text {
     height: 62%;
@@ -408,13 +426,16 @@ button {
     .modal .modal-content .text .close {
       font-size: .77rem; }
 
-  .landing .content .text p:first-child {
-    font-size: 1.75rem; }
-  .landing .content .text .title {
-    font-size: 3.75rem; }
-  .landing .content .text p:last-child {
-    font-size: 2rem;
-    padding: 0.3rem 0.2rem 0.3rem 0; }
+  .landing .content {
+    background-image: url(../sources/umd-tp.png);
+    background-size: cover; }
+    .landing .content .text p:first-child {
+      font-size: 1.75rem; }
+    .landing .content .text .title {
+      font-size: 3.75rem; }
+    .landing .content .text p:last-child {
+      font-size: 2rem;
+      padding: 0.3rem 0.2rem 0.3rem 0; }
   .landing img {
     display: none; }
 
@@ -458,23 +479,14 @@ button {
           font-size: .85rem;
           margin-left: -1.5rem; }
       .sguide .table table .table-header th {
-        font-size: .75rem; }
+        font-size: .8rem; }
       .sguide .table table tr td {
-        font-size: .65rem; }
+        font-size: .8rem; }
       .sguide .table .table-footer {
-        margin-bottom: .25rem; }
-        .sguide .table .table-footer .buttons {
-          width: 30vw; }
-          .sguide .table .table-footer .buttons button {
-            font-size: .75rem;
-            text-align: center;
-            margin: 0;
-            padding: .25rem 1rem; }
-          .sguide .table .table-footer .buttons #prev {
-            width: 25vw;
-            margin-right: .5rem; }
-          .sguide .table .table-footer .buttons #next {
-            width: 20vw; }
+        margin: .25rem 0; }
+        .sguide .table .table-footer .buttons button {
+          font-size: .77rem;
+          padding: .5rem 1rem; }
         .sguide .table .table-footer p {
           font-size: .7rem; } }
 @media (max-width: 765px) {
@@ -498,6 +510,8 @@ button {
     .modal .modal-content .text .close {
       font-size: .72rem; } }
 @media (max-width: 575px) {
+  .modal .modal-content #prev-text .text2 h1 {
+    font-size: 1.5rem; }
   .modal .modal-content .text {
     height: 67%;
     width: 85%; }
@@ -573,10 +587,6 @@ button {
       .sguide .table .table-footer p {
         font-size: .7rem; } }
 @media (max-width: 530px) {
-  body {
-    background-image: url(../sources/umd-tp.png);
-    background-size: cover; }
-
   header p {
     font-size: 1.5rem; }
   header nav a {
@@ -588,6 +598,8 @@ button {
   .modal .modal-content #prev-text {
     height: 35%;
     padding: 1.75rem 1.5rem; }
+    .modal .modal-content #prev-text .text2 h1 {
+      font-size: 1.25rem; }
     .modal .modal-content #prev-text .text2 .links a {
       font-size: .8rem; }
   .modal .modal-content .text {
