@@ -90,7 +90,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     // NOTE #1 for values: 0 - not being sorted by that row, 1 - sorted ascending by that row, 2 - sorting descending by that row
     // NOTE #2 for indices: 0 - employee/name, 1 - department, 2 - title, 3 - salary
     $scope.sortRowArray = [1,0,0,0];
-    sortData();
+    
     $scope.sortRowObj = {
         "Employee":0,
         "Department":0,
@@ -102,6 +102,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     }
     $scope.year = $stateParams.year;
     tableService.getTable($stateParams.year).then(function(data) {
+        //console.log("Hello?")
         $scope.dataLoading = false;
         full_data = data.data;
         curr_data = full_data;
@@ -109,7 +110,8 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         $scope.tableData = tableArr;
         //console.log(full_data.length)
         $scope.max_pages =  Math.ceil (full_data.length / 10);
-
+        //console.log("Hello?")
+        sortData();
         //console.log($scope.tableData);
     });
     $scope.next_page = function() {
@@ -204,6 +206,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     };
     // Call this function after changing the sort array, it will sort automatically based upon the array data
     function sortData() {
+        //console.log("Sorted!")
         namesArray = ["Employee","Department","Title","Salary"];
         sortIndex = -1;
         sortVal = 0;
@@ -239,6 +242,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         $scope.max_pages = Math.ceil(curr_data.length / 10);
         $scope.tableData = curr_data.slice(0,10);
     }
+    
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
