@@ -3,10 +3,32 @@ $(document).ready(function () {
     /*
     jquery functions for landing page
     */
+
+//    $('window').resize(function () {
+             //        if ($('window').width() < 690) {
+             //
+             //            $('#about').click(function () {
+             //                $('#about').css('font-weight', 400);
+             //                $('#abt-modal').css('display', 'block');
+             //            });
+             //
+             //            $('#previous').click(function () {
+             //                $('#previous').css('font-weight', 400);
+             //                $('#prev-modal').css('display', 'block');
+             //            });
+             //        } else if ($('window').width() >= 690) {}
+             //    });
+
     $('#about').click(function () {
-        $('#about').css('font-weight', 400);
-        $('#abt-modal').css('display', 'block');
+        $('#about').toggleClass('toggleWeight');
+        $('#about-section').toggleClass('toggleDisplay');
     });
+
+    $('#previous').click(function () {
+        $('#previous').toggleClass('toggleWeight');
+        $('#allGuides').toggleClass('toggleDisplay');
+    });
+
 
     $('.close').click(function () {
         $('#about').css('font-weight', 200);
@@ -24,10 +46,6 @@ $(document).ready(function () {
         $('#filter-modal').css('display', 'none');
     });
 
-    $('#previous').click(function () {
-        $('#previous').css('font-weight', 400);
-        $('#prev-modal').css('display', 'block');
-    });
 
     /*
     jquery functions for salary guide landing page

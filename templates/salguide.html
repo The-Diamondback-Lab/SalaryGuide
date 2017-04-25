@@ -1,9 +1,29 @@
 <wrapper>
     <div class="sguide center">
 
+        <section id="about-section">
+            <h1>About</h1>
+            <p>
+                At The Diamondback, we’ve pledged to hold the University of Maryland accountable in our coverage. Our annual salary guide adheres to that mission, laying out each university employee’s yearly pay in an easily digestible format. Here, you can find charts searchable by salary, department, title and other information.
+                <br />
+                <br /> Each year, the university provides this public data to The Diamondback in a basic Excel spreadsheet. We’ve rendered its contents on the online without tampering; if so inclined, readers could request the same public data from the university to receive all of the information presented in this guide.
+                <br />
+                <br /> The Diamondback chooses to compile this data year after year as a service to our readers — giving students, alumni, employees and others in the university community immediate, comprehensive access. As with all of our news coverage, the salary guide maintains The Diamondback’s commitment to objectivity. We won’t tell you what conclusions to draw from these numbers, but it’s our hope that they’ll give you every bit of information you need to reflect on your own. As always, your takeaways from this information are your own — just as they should be.
+            </p>
+        </section>
+
+        <section id="allGuides">
+            <h1>All Salary Guides</h1>
+            <div class="links center">
+                <a onclick="$('.close').click();" href="#/salGuide?year=2017">2017 Salary Guide</a>
+                <a onclick="$('.close').click();" href="#/salGuide?year=2016">2016 Salary Guide</a>
+                <a onclick="$('.close').click();" href="#/salGuide?year=2015">2015 Salary Guide</a>
+                <a onclick="$('.close').click();" href="#/salGuide?year=2014">2014 Salary Guide</a>
+                <a onclick="$('.close').click();" href="#/salGuide?year=2013">2013 Salary Guide</a>
+            </div>
+        </section>
 
         <div class="table">
-
             <div class="table-nav center">
                 <div class="title center">
                     <h1>{{year}} Salary Guide</h1>

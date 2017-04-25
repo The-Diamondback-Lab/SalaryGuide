@@ -10,12 +10,7 @@ $oswald: "Oswald",
 sans-serif;
 $prompt: "Prompt",
 sans-serif;
-//breakpoints variables
-//$phones: 0px 359px;
-//$phones2: 360px 600px;
-//$phoneTablets: 601px 767px;
-//$tablet: 769px 1024px;
-//general styles
+//begin styles
 * {
     box-sizing: border-box;
     outline: none;
@@ -47,6 +42,7 @@ body {
     height: 100vh;
     color: $black;
     width: 100vw;
+    font-weight: 200;
     overflow-x: hidden;
 }
 
@@ -54,28 +50,23 @@ h1 {
     font-family: $oswald;
 }
 
-.upArrow {
-    background-image: url(../sources/caret-up.png);
-}
-
-.downArrows {
-    background-image: url(../sources/caret-down.png);
-}
-
 header {
-    flex-direction: column;
-    width: 100vw;
+    border-bottom: thin solid $grey;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 90vw;
     margin: .5rem 0 .5rem 0;
-    position: relative;
-    top: 0;
+    padding-bottom: .5rem;
     p {
-        border-bottom: thin solid $black;
+        //border-bottom: thin solid $black;
         color: $black;
         font-family: $oswald;
         font-size: 2rem;
         text-align: center;
         text-transform: uppercase;
-        width: 35%;
+        //width: 35%;
         margin: 0;
         a {
             font-family: $oswald;
@@ -91,14 +82,14 @@ header {
         a {
             color: $red;
             font-family: $prompt;
-            font-weight: 200;
+            font-weight: 200 !important;
             padding: 0 0.25rem;
             text-align: center;
             text-decoration: none;
             text-transform: uppercase;
         }
         a:hover {
-            font-weight: 400;
+            font-weight: 400 !important;
             cursor: default;
         }
     }
@@ -108,7 +99,6 @@ footer {
     flex-direction: column;
     width: 100vw;
     position: fixed;
-    //bottom: 0;
     margin: 0 0 .5rem 0;
     .social-links {
         margin: 0rem .25rem 0 0;
@@ -161,10 +151,49 @@ button {
 }
 
 .toggleDisplay {
-    display: none;
+    display: block;
+}
+
+.toggleWeight {
+    font-weight: 400;
+}
+
+.links {
+    flex-direction: column;
+    margin: 0.25rem 0 0 0;
+    a {
+        color: $black;
+        font-size: 1rem;
+        margin: 0 0.25rem;
+        text-decoration: none;
+        font-family: $prompt;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-weight: 200;
+    }
+    a:last-child {
+        margin-bottom: 0;
+    }
+    a:hover {
+        color: $red;
+        font-weight: 400;
+    }
 }
 
 //end general styles
+//begin section styles
+section {
+    display: none;
+    width: 90vw;
+    border-bottom: thin solid $grey;
+    margin: 0;
+    padding: .75rem 0;
+    h1 {
+        margin: 0;
+    }
+}
+
+//end section styles
 //begin modal styles
 .modal {
     display: none;
@@ -186,27 +215,6 @@ button {
             //            .modal-header {
             //                margin-bottom: 2rem;
             //            }
-            .links {
-                flex-direction: column;
-                margin: 0.25rem 0 0 0;
-                a {
-                    color: $black;
-                    font-size: 1rem;
-                    margin: 0 0.25rem;
-                    text-decoration: none;
-                    font-family: $prompt;
-                    font-size: 1rem;
-                    margin: 0.5rem 0;
-                    font-weight: 200;
-                }
-                a:last-child {
-                    margin-bottom: 0;
-                }
-                a:hover {
-                    color: $red;
-                    font-weight: 400;
-                }
-            }
         }
         .text {
             flex-direction: column;
@@ -520,7 +528,6 @@ button {
             margin-bottom: 1.5rem;
             width: 90vw;
             .buttons {
-                //width: 22vw;
                 justify-content: space-between;
                 button {
                     background-color: $red;
@@ -546,7 +553,6 @@ button {
     .modal {
         .modal-content {
             .text {
-                //height: 60%;
                 .text2 {
                     p {
                         font-size: .87rem;
@@ -577,7 +583,6 @@ button {
     }
     .landing {
         .content {
-            //margin-top: 37.5%;
             .text {
                 p:first-child {
                     font-size: 1.6rem;
@@ -610,10 +615,9 @@ button {
 }
 
 @include breakpoint(max-width 865px) {
-    //    .wrapper {
-    //        background-image: url(../sources/umd-tp.png);
-    //        background-size: cover;
-    //    }
+    header {
+        //border-bottom: thin solid $white;
+    }
     .modal {
         .modal-content {
             .text {
@@ -1046,412 +1050,3 @@ button {
         }
     }
 }
-
-//@include breakpoint($phones2) {
-//    header {
-//        p {
-//            font-size: 1.5rem;
-//        }
-//        nav {
-//            a {
-//                font-size: .9rem;
-//            }
-//        }
-//    }
-//    footer {
-//        .social-links {
-//            a {
-//                font-size: 1.35rem;
-//            }
-//        }
-//    }
-//    .modal {
-//        .modal-content {
-//            #prev-text {
-//                height: 47.5%;
-//                padding: 1.75rem 1.5rem;
-//                #prev-close {
-//                    font-size: 1.5rem;
-//                    margin: 0 0 .5rem 0;
-//                }
-//                h1 {
-//                    margin: 1.25rem 0 .25rem 0;
-//                }
-//                .links {
-//                    a {
-//                        font-size: .8rem;
-//                    }
-//                }
-//            }
-//            .text {
-//                width: 95%;
-//                height: 87%;
-//                padding: 1.25rem 1.75rem;
-//                .text2 {
-//                    h1 {
-//                        font-size: 1.25rem;
-//                    }
-//                    p {
-//                        font-size: .7rem;
-//                    }
-//                }
-//                .close {
-//                    font-size: .85rem;
-//                }
-//            }
-//        }
-//    }
-//    .landing {
-//        .content {
-//            //top: 50;
-//            .text {
-//                p:first-child {
-//                    font-size: 1.4rem;
-//                }
-//                .title {
-//                    font-size: 3rem;
-//                }
-//                p:last-child {
-//                    font-size: 1.75rem;
-//                    padding: 0.3rem 0.2rem 0.3rem 0;
-//                }
-//            }
-//        }
-//        img {
-//            display: none;
-//        }
-//    }
-//    .sguide {
-//        flex-direction: column;
-//        align-content: center;
-//        justify-content: center;
-//        .table {
-//            flex-direction: column;
-//            align-content: center;
-//            justify-content: center;
-//            .table-nav {
-//                flex-direction: column;
-//                align-items: flex-start;
-//                justify-content: flex-start;
-//                width: 90vw;
-//                .title {
-//                    justify-content: space-between;
-//                    h1 {
-//                        margin-left: 0;
-//                        font-size: 1.5rem;
-//                    }
-//                    #filter {
-//                        margin-left: 2.2rem;
-//                        text-align: right;
-//                        font-size: 1rem;
-//                    }
-//                }
-//                #search {
-//                    width: 90vw;
-//                    margin: .25rem 0 0 0;
-//                }
-//            }
-//            .filter {
-//                width: 90vw;
-//                .options {
-//                    .sal-options {
-//                        .ranges {
-//                            div {
-//                                p {
-//                                    font-size: .8rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                    .dept-options {
-//                        .deptandtitle-header {
-//                            flex-direction: column;
-//                            #dept-nav {
-//                                margin: 0 0 0 1rem;
-//                                a {
-//                                    font-size: 1rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                    #depts {
-//                        .list-containers {
-//                            .dept-lists {
-//                                li {
-//                                    font-size: .85rem;
-//                                    margin-left: -1.5rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            table {
-//                .table-header {
-//                    th {
-//                        font-size: .6rem;
-//                    }
-//                }
-//                tr {
-//                    td {
-//                        font-size: .65rem;
-//                    }
-//                }
-//            }
-//            .table-footer {
-//                .buttons {
-//                    width: 30vw;
-//                    button {
-//                        font-size: .65rem;
-//                        text-align: center;
-//                        margin: 0;
-//                        padding: .25rem 1rem;
-//                    }
-//                    #prev {
-//                        width: 22vw;
-//                        margin-right: .5rem;
-//                    }
-//                    #next {
-//                        width: 15vw;
-//                    }
-//                }
-//                p {
-//                    font-size: .7rem;
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//@include breakpoint($phoneTablets) {
-//    footer {
-//        .social-links {
-//            a {
-//                font-size: 2rem;
-//            }
-//        }
-//    }
-//    .modal {
-//        .modal-content {
-//            #prev-text {
-//                height: 40%;
-//                padding: 1.25rem 1rem;
-//            }
-//            .text {
-//                width: 95%;
-//                height: 75%;
-//                padding: 1.25rem 1.75rem;
-//                .text2 {
-//                    h1 {
-//                        font-size: 1.5rem;
-//                    }
-//                    p {
-//                        font-size: .75rem;
-//                    }
-//                }
-//                .close {
-//                    font-size: .9rem;
-//                }
-//            }
-//        }
-//    }
-//    .landing {
-//        .content {
-//            .text {
-//                p:first-child {
-//                    font-size: 1.5rem;
-//                }
-//                .title {
-//                    font-size: 3.2rem;
-//                }
-//                p:last-child {
-//                    font-size: 2rem;
-//                    padding: 0.3rem 0.2rem 0.3rem 0;
-//                }
-//            }
-//            img {
-//                display: none;
-//            }
-//        }
-//    }
-//    .sguide {
-//        .table {
-//            .table-nav {
-//                flex-direction: column;
-//                align-items: flex-start;
-//                justify-content: flex-start;
-//                .title {
-//                    justify-content: space-between;
-//                    width: 90vw;
-//                    h1 {
-//                        margin-left: 0;
-//                    }
-//                    #filter {
-//                        margin-left: .6rem;
-//                        text-align: right;
-//                    }
-//                }
-//                #search {
-//                    width: 90vw;
-//                    margin: .25rem 0 0 0;
-//                }
-//            }
-//            .filter {
-//                width: 90vw;
-//                .options {
-//                    .sal-options {
-//                        .ranges {
-//                            div {
-//                                p {
-//                                    font-size: .8rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                    .dept-options {
-//                        .deptandtitle-header {
-//                            flex-direction: column;
-//                            #dept-nav {
-//                                margin: 0 0 0 1rem;
-//                                a {
-//                                    font-size: 1rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                    #depts {
-//                        .list-containers {
-//                            .dept-lists {
-//                                li {
-//                                    font-size: .85rem;
-//                                    margin-left: -1.5rem;
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            table {
-//                .table-header {
-//                    th {
-//                        font-size: .7rem;
-//                    }
-//                }
-//                tr {
-//                    td {
-//                        font-size: .7rem;
-//                    }
-//                }
-//            }
-//            .table-footer {
-//                .buttons {
-//                    width: 30vw;
-//                    button {
-//                        font-size: .65rem;
-//                        text-align: center;
-//                        margin: 0;
-//                        padding: .25rem 1rem;
-//                    }
-//                    #prev {
-//                        width: 20vw;
-//                        margin-right: .5rem;
-//                    }
-//                    #next {
-//                        width: 15vw;
-//                    }
-//                }
-//                p {
-//                    font-size: .7rem;
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//@include breakpoint($tablet) {
-//    .modal {
-//        .modal-content {
-//            #prev-text {
-//                height: 32%;
-//            }
-//            #filter-text {
-//                height: 40%;
-//            }
-//            .text {
-//                width: 75%;
-//                height: 85%;
-//                padding: 1.25rem 2rem;
-//                .text2 {
-//                    h1 {
-//                        font-size: 1.5rem;
-//                    }
-//                    p {
-//                        font-size: 1rem;
-//                    }
-//                }
-//                .close {
-//                    font-size: 1rem;
-//                }
-//            }
-//        }
-//    }
-//    .landing {
-//        .content {
-//            //margin-top: 37.5%;
-//            .text {
-//                p:first-child {
-//                    font-size: 1.6rem;
-//                }
-//                .title {
-//                    font-size: 3.5rem;
-//                }
-//            }
-//        }
-//    }
-//    .sguide {
-//        .filter-nav {
-//            h1 {
-//                //font-size: 1.1rem;
-//            }
-//            p {
-//                font-size: .85rem;
-//            }
-//        }
-//        .options {
-//            .sal-options {
-//                h1 {
-//                    //font-size: 1.1rem;
-//                }
-//                .ranges {
-//                    div {
-//                        p {
-//                            font-size: .75rem;
-//                        }
-//                    }
-//                }
-//            }
-//            .dept-options {
-//                .deptandtitle-header {
-//                    align-items: flex-end;
-//                    h1 {
-//                        //font-size: 1.2rem;
-//                    }
-//                    #dept-nav {
-//                        a {
-//                            margin-left: .5rem;
-//                            font-size: .75rem;
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        .table-footer {
-//            .buttons {
-//                button {
-//                    font-size: .8rem;
-//                    text-align: center;
-//                }
-//            }
-//        }
-//    }
-//}
