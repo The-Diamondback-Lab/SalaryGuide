@@ -4,30 +4,51 @@ $(document).ready(function () {
     jquery functions for landing page
     */
 
-//    $('window').resize(function () {
-             //        if ($('window').width() < 690) {
-             //
-             //            $('#about').click(function () {
-             //                $('#about').css('font-weight', 400);
-             //                $('#abt-modal').css('display', 'block');
-             //            });
-             //
-             //            $('#previous').click(function () {
-             //                $('#previous').css('font-weight', 400);
-             //                $('#prev-modal').css('display', 'block');
-             //            });
-             //        } else if ($('window').width() >= 690) {}
-             //    });
-
+    //    $(window).resize(function () {
+    //        if ($('header').width() < 690) {
+    //
+    //            $('#about').click(function () {
+    //                $('#about').css('font-weight', 400);
+    //                $('#abt-modal').css('display', 'block');
+    //            });
+    //
+    //            $('#previous').click(function () {
+    //                $('#previous').css('font-weight', 400);
+    //                $('#prev-modal').css('display', 'block');
+    //            });
+    //
+    //        } else if ($('header').width() >= 690) {
+    //            $('#about').click(function () {
+    //                $('#about').toggleClass('toggleWeight');
+    //                $('#about-section').toggleClass('toggleDisplay');
+    //            });
+    //
+    //            $('#previous').click(function () {
+    //                $('#previous').toggleClass('toggleWeight');
+    //                $('#allGuides').toggleClass('toggleDisplay');
+    //            });
+    //
+    //        }
+    //    });
     $('#about').click(function () {
-        $('#about').toggleClass('toggleWeight');
-        $('#about-section').toggleClass('toggleDisplay');
+        $('#about').css('font-weight', 400);
+        $('#abt-modal').css('display', 'block');
     });
 
     $('#previous').click(function () {
-        $('#previous').toggleClass('toggleWeight');
-        $('#allGuides').toggleClass('toggleDisplay');
+        $('#previous').css('font-weight', 400);
+        $('#prev-modal').css('display', 'block');
     });
+
+    //    $('#about').click(function () {
+    //        $('#about').toggleClass('toggleWeight');
+    //        $('#about-section').toggleClass('toggleDisplay');
+    //    });
+    //
+    //    $('#previous').click(function () {
+    //        $('#previous').toggleClass('toggleWeight');
+    //        $('#allGuides').toggleClass('toggleDisplay');
+    //    });
 
 
     $('.close').click(function () {

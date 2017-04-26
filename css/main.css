@@ -27,6 +27,11 @@ body {
   font-weight: 200;
   overflow-x: hidden; }
 
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer; }
+
 h1 {
   font-family: "Oswald", sans-serif; }
 
@@ -49,9 +54,13 @@ header {
     header p a {
       font-family: "Oswald", sans-serif;
       text-decoration: none;
-      color: #2e2e2e; }
+      color: #2e2e2e;
+      transition: letter-spacing 1s; }
     header p a:visited {
       color: #2e2e2e; }
+    header p a:hover {
+      color: #d41d1d;
+      letter-spacing: .25rem; }
   header nav {
     margin: .25rem 0 0 0; }
     header nav a {
@@ -168,7 +177,6 @@ section {
       height: 60%;
       width: 70%;
       background: #fff;
-      z-index: 1;
       padding: 2rem 3rem; }
       .modal .modal-content .text .text2 {
         width: 90%; }
@@ -233,8 +241,25 @@ section {
           text-decoration: none; }
         .landing .content .text p:last-child a:visited {
           color: #fff; }
+      .landing .content .text p:last-child {
+        font-family: "Oswald", sans-serif;
+        color: #fff;
+        background-color: #d41d1d;
+        font-size: 2.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+        margin: 0;
+        text-align: right;
+        transition: background-color 1s;
+        transition: font-size 1s; }
+        .landing .content .text p:last-child a {
+          color: #fff;
+          text-decoration: none;
+          transition: background-color 1s; }
+        .landing .content .text p:last-child a:visited {
+          color: #fff; }
       .landing .content .text #view:hover {
-        background-color: #fff; }
+        background-color: #fff;
+        font-size: 2.75rem; }
         .landing .content .text #view:hover a {
           color: #d41d1d; }
     .landing .content img {
@@ -352,10 +377,12 @@ section {
     position: relative; }
     .sguide .table table th {
       background-color: #d41d1d;
+      transition: background-color .5s;
       text-align: center;
       font-family: "Oswald", sans-serif;
       font-size: 1.25rem;
-      width: 30%; }
+      width: 30%;
+      height: 35%; }
     .sguide .table table th:hover {
       background-color: #cc4040;
       cursor: default; }
@@ -368,12 +395,16 @@ section {
       text-transform: uppercase;
       width: 95vw; }
     .sguide .table table tr {
-      height: 4vh;
       border: none; }
+      .sguide .table table tr td {
+        line-height: 100%;
+        padding: .75rem; }
     .sguide .table table tr:nth-child(odd) {
-      background-color: #efefef; }
+      background-color: #efefef;
+      transition: background-color .5s; }
     .sguide .table table tr:nth-child(even) {
-      background-color: #ece9e9; }
+      background-color: #ece9e9;
+      transition: background-color .5s; }
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
       font-weight: 200;
@@ -382,26 +413,28 @@ section {
     .sguide .table table #tableRow {
       width: 10%; }
     .sguide .table table tr:hover {
-      background-color: #f6ecec;
+      background-color: #E0E0E0;
       cursor: default; }
   .sguide .table .table-footer {
     flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
     margin-bottom: 1.5rem;
-    width: 90vw; }
+    justify-content: space-between; }
     .sguide .table .table-footer .buttons {
       justify-content: space-between; }
       .sguide .table .table-footer .buttons button {
         background-color: #d41d1d;
-        text-align: center;
-        margin: 0; }
+        border-radius: 1.5rem;
+        padding: .5rem .25rem;
+        transition: background-color .5s;
+        text-align: center; }
       .sguide .table .table-footer .buttons button:hover {
         background-color: #cc4040; }
       .sguide .table .table-footer .buttons #prev {
-        margin-right: .5rem; }
+        margin: 0 .5rem 0 0;
+        width: 10vw; }
       .sguide .table .table-footer .buttons #next {
-        margin-left: .5rem; }
+        margin: 0 0 0 .5rem;
+        width: 10vw; }
 
 @media (max-width: 1095px) {
   .modal .modal-content .text .text2 p {
@@ -581,18 +614,14 @@ section {
         font-size: .6rem; }
       .sguide .table table tr td {
         font-size: .65rem; }
-      .sguide .table .table-footer .buttons {
-        width: 30vw; }
-        .sguide .table .table-footer .buttons button {
-          font-size: .65rem;
-          text-align: center;
-          margin: 0;
-          padding: .25rem 1rem; }
-        .sguide .table .table-footer .buttons #prev {
-          width: 22vw;
-          margin-right: .5rem; }
-        .sguide .table .table-footer .buttons #next {
-          width: 15vw; }
+      .sguide .table .table-footer .buttons button {
+        font-size: .65rem;
+        text-align: center;
+        padding: .25rem 1rem; }
+      .sguide .table .table-footer .buttons #prev {
+        margin-right: .25rem; }
+      .sguide .table .table-footer .buttons #next {
+        margin-left: .25rem; }
       .sguide .table .table-footer p {
         font-size: .7rem; } }
 @media (max-width: 530px) {
