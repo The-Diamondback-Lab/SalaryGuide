@@ -32,6 +32,9 @@ body {
 [x-ng-click] {
   cursor: pointer; }
 
+a:hover {
+  cursor: pointer; }
+
 h1 {
   font-family: "Oswald", sans-serif; }
 
@@ -43,7 +46,8 @@ header {
   justify-content: space-between;
   width: 90vw;
   margin: .5rem 0 .5rem 0;
-  padding-bottom: .5rem; }
+  padding-bottom: .5rem;
+  z-index: 2; }
   header p {
     color: #2e2e2e;
     font-family: "Oswald", sans-serif;
@@ -60,7 +64,8 @@ header {
       color: #2e2e2e; }
     header p a:hover {
       color: #d41d1d;
-      letter-spacing: .25rem; }
+      letter-spacing: .25rem;
+      cursor: pointer; }
   header nav {
     margin: .25rem 0 0 0; }
     header nav a {
@@ -73,7 +78,7 @@ header {
       text-transform: uppercase; }
     header nav a:hover {
       font-weight: 400 !important;
-      cursor: default; }
+      cursor: pointer; }
 
 footer {
   flex-direction: column;
@@ -203,14 +208,15 @@ section {
         text-align: right;
         margin: .75rem 0 0 0; }
       .modal .modal-content .text .close:hover {
-        cursor: default; }
+        cursor: pointer; }
 
 .landing {
   flex-direction: column; }
   .landing .content {
     flex-direction: row;
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    z-index: 1; }
     .landing .content .text {
       margin: 0 1rem; }
       .landing .content .text p:first-child {
@@ -381,8 +387,7 @@ section {
       text-align: center;
       font-family: "Oswald", sans-serif;
       font-size: 1.25rem;
-      width: 30%;
-      height: 35%; }
+      width: 30%; }
     .sguide .table table th:hover {
       background-color: #cc4040;
       cursor: default; }
@@ -395,21 +400,20 @@ section {
       text-transform: uppercase;
       width: 95vw; }
     .sguide .table table tr {
-      border: none; }
-      .sguide .table table tr td {
-        line-height: 100%;
-        padding: .75rem; }
+      border: none;
+      height: 4em; }
     .sguide .table table tr:nth-child(odd) {
       background-color: #efefef;
-      transition: background-color .5s; }
+      transition: background-color .3s; }
     .sguide .table table tr:nth-child(even) {
       background-color: #ece9e9;
-      transition: background-color .5s; }
+      transition: background-color .3s; }
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
       font-weight: 200;
       font-size: 1rem;
-      margin: 0; }
+      margin: 0;
+      padding: 0 .5rem; }
     .sguide .table table #tableRow {
       width: 10%; }
     .sguide .table table tr:hover {
@@ -653,7 +657,10 @@ section {
   .modal .modal-content .text .text2 p {
     font-size: .65rem; }
   .modal .modal-content .text .close {
-    font-size: .62rem; } }
+    font-size: .62rem; }
+
+  .sguide .table table tr {
+    height: 2em; } }
 @media (max-width: 375px) {
   .modal .modal-content .text {
     height: 77%; } }
