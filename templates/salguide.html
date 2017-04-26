@@ -418,7 +418,9 @@
 
                 <div class="buttons center">
                     <button class="center" id="prev" ng-disalbed="page_count == 1" ng-click="prev_page()">&#9664;</button>
-                    <button class="center" id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">&#9654;</button>
+                    <button class="center" id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">&#9654;</button> =======
+                    <button id="prev" ng-disabled="page_count == 1" ng-click="prev_page()">Previous</button>
+                    <button id="next" ng-disabled="page_count == max_pages" ng-click="next_page()">Next</button>
                 </div>
                 <p>Page {{page_count}} of {{max_pages}}</p>
 

@@ -242,6 +242,24 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         $scope.max_pages = Math.ceil(curr_data.length / 10);
         $scope.tableData = curr_data.slice(0,10);
     }
+    window.onkeydown = function(e) {
+        var event = window.event ? window.event : e;
+        var target = event.target || event.srcElement;
+        
+        if (target.nodeName != 'INPUT') {
+            
+            // Pressing left
+            if (event.keyCode == 37) {
+                console.log("left")
+                document.getElementById("prev").click();
+            }
+            if (event.keyCode == 39) {
+                console.log("right")
+                //$scope.next_page();
+                document.getElementById("next").click();
+            }
+        }
+    }
     
 }]);
 
