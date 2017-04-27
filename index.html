@@ -1,52 +1,53 @@
+<!DOCTYPE html>
 <html ng-app="myApp">
 
 <head>
-    <title>DBK Salary Guide</title>
-    <meta charset="utf-8">
+  <title>DBK Salary Guide</title>
+  <meta charset="utf-8">
 
-    <!-- Angular Main Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <!-- Angular Main Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 
-    <!-- Angular Libraries/Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
-    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
+  <!-- Angular Libraries/Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.js"></script>
 
-    <!-- Stylesheet Libraries -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Prompt:200,300,400" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- Stylesheet Libraries -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700|Prompt:200,300,400" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <!-- self-defined files -->
-    <script type="text/javascript" src="js/lex-js.js"></script>
-    <script src="js/app.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- self-defined files -->
+  <script type="text/javascript" src="js/lex-js.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Prompt:200,300,400" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700|Prompt:200,300,400" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://use.fontawesome.com/c591e9e2eb.js"></script>
+  <script src="https://use.fontawesome.com/c591e9e2eb.js"></script>
 </head>
 
 <body ng-controller="MainCtlr">
 
-    <wrapper>
+  <wrapper>
 
-        <div class="landing center">
+    <div class="landing center">
 
-            <header>
-                <p><a href="http://www.dbknews.com/">DBK</a></p>
-                <nav>
-                    <a ng-click="go('home')">Home</a>
-                    <a id="about">About</a>
-                    <a id="previous">All Guides</a>
-                </nav>
-            </header>
+      <header>
+        <p><a href="http://www.dbknews.com/">DBK</a></p>
+        <nav>
+          <a ng-click="go('home')">Home</a>
+          <a id="about">About</a>
+          <a id="previous">All Guides</a>
+        </nav>
+      </header>
 
-            <!--landing page content-->
-            <div ui-view></div>
+      <!--landing page content-->
+      <div ui-view></div>
 
-            <!--
+      <!--
             <footer class="footer center">
                 <div class="social-links center">
                     <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -57,9 +58,9 @@
             </footer>
 -->
 
-        </div>
+    </div>
 
-        <!--
+    <!--
 <section id="about-section">
     <h1>About</h1>
     <p>
@@ -83,58 +84,62 @@
 </section>
 -->
 
-        <div class="modal center" id="abt-modal">
-            <div class="modal-content center">
+    <div class="modal center" id="abt-modal">
+      <div class="modal-content center">
 
-                <div class="text center">
+        <div class="text center">
 
-                    <!--
+          <!--
 <div class="modal-header center">
     <p class="close" id="abt-close">&times;</p>
 </div>
 -->
 
-                    <div class="text2">
-                        <h1>About</h1>
-                        <p>
-                            At The Diamondback, we’ve pledged to hold the University of Maryland accountable in our coverage. Our annual salary guide adheres to that mission, laying out each university employee’s yearly pay in an easily digestible format. Here, you can find charts searchable by salary, department, title and other information.
-                            <br />
-                            <br /> Each year, the university provides this public data to The Diamondback in a basic Excel spreadsheet. We’ve rendered its contents on the online without tampering; if so inclined, readers could request the same public data from the university to receive all of the information presented in this guide.
-                            <br />
-                            <br /> The Diamondback chooses to compile this data year after year as a service to our readers — giving students, alumni, employees and others in the university community immediate, comprehensive access. As with all of our news coverage, the salary guide maintains The Diamondback’s commitment to objectivity. We won’t tell you what conclusions to draw from these numbers, but it’s our hope that they’ll give you every bit of information you need to reflect on your own. As always, your takeaways from this information are your own — just as they should be.
-                        </p>
-                    </div>
+          <div class="text2">
+            <h1>About</h1>
+            <p>
+              At The Diamondback, we’ve pledged to hold the University of Maryland accountable in our coverage. Our annual salary guide adheres to that mission, laying out each university employee’s yearly pay in an easily digestible format. Here, you can find charts
+              searchable by salary, department, title and other information.
+              <br />
+              <br /> Each year, the university provides this public data to The Diamondback in a basic Excel spreadsheet. We’ve rendered its contents on the online without tampering; if so inclined, readers could request the same public data from the
+              university to receive all of the information presented in this guide.
+              <br />
+              <br /> The Diamondback chooses to compile this data year after year as a service to our readers — giving students, alumni, employees and others in the university community immediate, comprehensive access. As with all of our news coverage,
+              the salary guide maintains The Diamondback’s commitment to objectivity. We won’t tell you what conclusions to draw from these numbers, but it’s our hope that they’ll give you every bit of information you need to reflect on your own. As always,
+              your takeaways from this information are your own — just as they should be.
+            </p>
+          </div>
 
-                    <p class="close" id="abt-close">Close</p>
-                </div>
-            </div>
+          <p class="close" id="abt-close">Close</p>
         </div>
+      </div>
+    </div>
 
-        <div class="modal center" id="prev-modal">
-            <div class="modal-content center">
-                <div class="text center" id="prev-text">
-                    <!--
+    <div class="modal center" id="prev-modal">
+      <div class="modal-content center">
+        <div class="text center" id="prev-text">
+          <!--
 <div class="modal-header center">
     <p class="close" id="abt-close">&times;</p>
 </div>
 -->
-                    <div class="text2">
-                        <h1>All Salary Guides</h1>
-                        <div class="links center">
-                            <a onclick="$('.close').click();" href="#/salGuide?year=2017">2017 Salary Guide</a>
-                            <a onclick="$('.close').click();" href="#/salGuide?year=2016">2016 Salary Guide</a>
-                            <a onclick="$('.close').click();" href="#/salGuide?year=2015">2015 Salary Guide</a>
-                            <a onclick="$('.close').click();" href="#/salGuide?year=2014">2014 Salary Guide</a>
-                            <a onclick="$('.close').click();" href="#/salGuide?year=2013">2013 Salary Guide</a>
-                        </div>
-                    </div>
-
-                    <p class="close" id="abt-close">Close</p>
-                </div>
+          <div class="text2">
+            <h1>All Salary Guides</h1>
+            <div class="links center">
+              <a onclick="$('.close').click();" href="#/salGuide?year=2017">2017 Salary Guide</a>
+              <a onclick="$('.close').click();" href="#/salGuide?year=2016">2016 Salary Guide</a>
+              <a onclick="$('.close').click();" href="#/salGuide?year=2015">2015 Salary Guide</a>
+              <a onclick="$('.close').click();" href="#/salGuide?year=2014">2014 Salary Guide</a>
+              <a onclick="$('.close').click();" href="#/salGuide?year=2013">2013 Salary Guide</a>
             </div>
-        </div>
+          </div>
 
-    </wrapper>
+          <p class="close" id="abtClose">Close</p>
+        </div>
+      </div>
+    </div>
+
+  </wrapper>
 
 </body>
 
