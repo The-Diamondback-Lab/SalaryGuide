@@ -1,23 +1,33 @@
 $(document).ready(function () {
 
-    /*
-    jquery functions for landing page
-    */
 
+
+    //    $('#about').click(function () {
+    //        $('#about').toggleClass('toggleWeight');
+    //        $('#abt-modal').toggleClass('toggleDisplay');
+    //    });
+    //
+    //    $('#previous').click(function () {
+    //        $('#previous').toggleClass('toggleWeight');
+    //        $('#prev-modal').toggleClass('toggleDisplay');
+    //    });
+    $('#about').click(function () {
+        $('#about').toggleClass('toggleWeight');
+        $('#about-section').toggleClass('toggleDisplay');
+        if ($('#allGuides').css('display') == 'block') {
+            $('#allGuides').toggleClass('toggleDisplay');
+        }
+    });
+
+    $('#previous').click(function () {
+        $('#previous').toggleClass('toggleWeight');
+        $('#allGuides').toggleClass('toggleDisplay');
+        if ($('#about-section').css('display') == 'block') {
+            $('#about-section').toggleClass('toggleDisplay');
+        }
+    });
     //    $(window).resize(function () {
-    //        if ($('header').width() < 690) {
-    //
-    //            $('#about').click(function () {
-    //                $('#about').css('font-weight', 400);
-    //                $('#abt-modal').css('display', 'block');
-    //            });
-    //
-    //            $('#previous').click(function () {
-    //                $('#previous').css('font-weight', 400);
-    //                $('#prev-modal').css('display', 'block');
-    //            });
-    //
-    //        } else if ($('header').width() >= 690) {
+    //        if (window.matchMedia("(max-width: 865px)").matches) {
     //            $('#about').click(function () {
     //                $('#about').toggleClass('toggleWeight');
     //                $('#about-section').toggleClass('toggleDisplay');
@@ -27,19 +37,22 @@ $(document).ready(function () {
     //                $('#previous').toggleClass('toggleWeight');
     //                $('#allGuides').toggleClass('toggleDisplay');
     //            });
-    //
     //        }
     //    });
-    $('#about').click(function () {
-        $('#about').css('font-weight', 400);
-        $('#abt-modal').css('display', 'block');
-    });
+    /*
+    jquery functions for landing page
+    */
 
-    $('#previous').click(function () {
-        $('#previous').css('font-weight', 400);
-        $('#prev-modal').css('display', 'block');
-    });
-
+    //    $('#about').click(function () {
+    //        $('#about').css('font-weight', 400);
+    //        $('#abt-modal').css('display', 'block');
+    //    });
+    //
+    //    $('#previous').click(function () {
+    //        $('#previous').css('font-weight', 400);
+    //        $('#prev-modal').css('display', 'block');
+    //    });
+    //
     //    $('#about').click(function () {
     //        $('#about').toggleClass('toggleWeight');
     //        $('#about-section').toggleClass('toggleDisplay');
@@ -50,7 +63,7 @@ $(document).ready(function () {
     //        $('#allGuides').toggleClass('toggleDisplay');
     //    });
 
-
+    //close functions
     $('.close').click(function () {
         $('#about').css('font-weight', 200);
         $('#abt-modal').css('display', 'none');
@@ -68,9 +81,7 @@ $(document).ready(function () {
     });
 
 
-    /*
-    jquery functions for salary guide landing page
-    */
+    //jquery functions for salary guide landing page
     $('#filter').click(function () {
         $('.filter').toggleClass('toggleDisplay');
         $('#salary').css('font-weight', 400);
@@ -106,9 +117,7 @@ $(document).ready(function () {
         icon.toggleClass("fa fa-sort-asc fa fa-sort-desc");
     });
 
-    /*
-    filter functions
-    */
+    //filter functions
     $('.A').click(function () {
         $('#A').css('display', 'flex');
         $('#B').css('display', 'none');

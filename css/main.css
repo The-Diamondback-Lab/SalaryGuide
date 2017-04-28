@@ -1,25 +1,31 @@
+/* line 14, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 * {
   box-sizing: border-box;
   outline: none; }
+  /* line 17, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   * a:hover {
     cursor: default; }
 
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .wrapper {
   max-width: 90%;
   width: 2480px;
   margin: 0 auto; }
 
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .center {
   align-items: center;
   display: flex;
   justify-content: center; }
 
+/* line 34, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .center-page {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
+/* line 41, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 body {
   height: 100vh;
   color: #2e2e2e;
@@ -27,17 +33,21 @@ body {
   font-weight: 200;
   overflow-x: hidden; }
 
+/* line 49, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 [ng-click],
 [data-ng-click],
 [x-ng-click] {
   cursor: pointer; }
 
+/* line 55, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 a:hover {
   cursor: pointer; }
 
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 h1 {
   font-family: "Oswald", sans-serif; }
 
+/* line 63, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 header {
   border-bottom: thin solid #ece9e9;
   display: flex;
@@ -47,6 +57,7 @@ header {
   width: 90vw;
   margin: .5rem 0 .5rem 0;
   padding-bottom: .5rem; }
+  /* line 73, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   header p {
     color: #2e2e2e;
     font-family: "Oswald", sans-serif;
@@ -54,19 +65,24 @@ header {
     text-align: center;
     text-transform: uppercase;
     margin: 0; }
+    /* line 81, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     header p a {
       font-family: "Oswald", sans-serif;
       text-decoration: none;
       color: #2e2e2e;
       transition: letter-spacing 1s; }
+    /* line 87, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     header p a:visited {
       color: #2e2e2e; }
+    /* line 90, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     header p a:hover {
       color: #d41d1d;
       letter-spacing: .25rem;
       cursor: pointer; }
+  /* line 96, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   header nav {
     margin: .25rem 0 0 0; }
+    /* line 98, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     header nav a {
       color: #d41d1d;
       font-family: "Prompt", sans-serif;
@@ -75,28 +91,34 @@ header {
       text-align: center;
       text-decoration: none;
       text-transform: uppercase; }
+    /* line 107, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     header nav a:hover {
       font-weight: 400 !important;
       cursor: pointer; }
 
+/* line 114, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 footer {
   flex-direction: column;
   width: 100vw;
   position: fixed;
   margin: 0 0 .5rem 0; }
+  /* line 119, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   footer .social-links {
     margin: 0rem .25rem 0 0;
     border-top: thin solid #2e2e2e;
     width: 37.5%; }
+    /* line 123, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     footer .social-links a {
       color: #2e2e2e;
       font-size: 2rem;
       text-align: center;
       margin: .25rem 0.25rem 0 .25rem; }
+    /* line 129, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     footer .social-links a:hover {
       color: #d41d1d;
       font-size: 2.15rem; }
 
+/* line 136, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 button {
   background-color: #cc4040;
   border: none;
@@ -109,6 +131,7 @@ button {
   text-transform: uppercase;
   font-size: .5rem; }
 
+/* line 149, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 #search {
   width: 20%;
   outline: none;
@@ -116,49 +139,64 @@ button {
   border-radius: 2rem;
   padding: .25rem 1rem; }
 
+/* line 157, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 #search[type=text]:focus {
   border-color: #d41d1d;
   font-family: "Prompt", sans-serif;
   font-weight: 300; }
 
+/* line 163, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 ::-webkit-input-placeholder {
   color: #2e2e2e;
   font-family: "Prompt", sans-serif;
   font-weight: 300; }
 
+/* line 169, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .toggleDisplay {
   display: block; }
 
+/* line 173, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .toggleWeight {
   font-weight: 400; }
 
+/* line 177, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .links {
   flex-direction: column;
   margin: 0.25rem 0 0 0; }
+  /* line 180, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .links a {
     color: #2e2e2e;
     font-size: 1rem;
-    margin: 0 0.25rem;
+    margin: .25rem 0;
     text-decoration: none;
     font-family: "Prompt", sans-serif;
     font-size: 1rem;
-    margin: 0.5rem 0;
     font-weight: 200; }
+  /* line 189, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .links a:last-child {
     margin-bottom: 0; }
+  /* line 192, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .links a:hover {
     color: #d41d1d;
     font-weight: 400; }
 
+/* line 200, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 section {
   display: none;
   width: 90vw;
   border-bottom: thin solid #ece9e9;
   margin: 0;
   padding: .75rem 0; }
+  /* line 206, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   section h1 {
+    color: #d41d1d;
     margin: 0; }
+  /* line 210, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
+  section p {
+    font-family: "Prompt", sans-serif;
+    font-size: .9rem; }
 
+/* line 218, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .modal {
   display: none;
   position: fixed;
@@ -169,21 +207,26 @@ section {
   left: 0;
   outline: none;
   padding: 1.5rem 1rem; }
+  /* line 229, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content {
     flex-direction: column;
     height: 100%;
     width: 100%; }
+    /* line 233, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content #prev-text {
       height: 40%;
       padding: 2rem 3rem; }
+    /* line 240, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text {
       flex-direction: column;
       height: 60%;
       width: 70%;
       background: #fff;
       padding: 2rem 3rem; }
+      /* line 264, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .modal .modal-content .text .text2 {
         width: 90%; }
+        /* line 266, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .modal .modal-content .text .text2 h1 {
           color: #d41d1d;
           font-family: "Oswald", sans-serif;
@@ -191,6 +234,7 @@ section {
           text-align: left;
           margin: 0 0 .75rem 0;
           width: 100%; }
+        /* line 274, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .modal .modal-content .text .text2 p {
           color: #2e2e2e;
           font-family: "Prompt", sans-serif;
@@ -198,6 +242,7 @@ section {
           margin: 0;
           font-size: .9rem;
           font-weight: 200; }
+      /* line 283, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .modal .modal-content .text .close {
         width: 90%;
         font-family: "Prompt", sans-serif;
@@ -206,18 +251,23 @@ section {
         text-transform: uppercase;
         text-align: right;
         margin: .75rem 0 0 0; }
+      /* line 292, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .modal .modal-content .text .close:hover {
         cursor: pointer; }
 
+/* line 301, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .landing {
   flex-direction: column; }
+  /* line 303, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content {
     flex-direction: row;
     width: 100vw;
     height: 100vh;
     z-index: 1; }
+    /* line 308, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .landing .content .text {
       margin: 0 1rem; }
+      /* line 310, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .landing .content .text p:first-child {
         font-family: "Prompt", sans-serif;
         font-weight: 300;
@@ -226,6 +276,7 @@ section {
         text-align: left;
         text-transform: uppercase;
         margin: 0; }
+      /* line 319, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .landing .content .text .title {
         font-family: "Oswald", sans-serif;
         color: #2e2e2e;
@@ -233,6 +284,7 @@ section {
         font-size: 5.5rem;
         margin: 0 0 0.5rem 0;
         text-transform: uppercase; }
+      /* line 327, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .landing .content .text p:last-child {
         font-family: "Oswald", sans-serif;
         color: #fff;
@@ -241,11 +293,14 @@ section {
         padding: 0.5rem 0.25rem 0.5rem 0;
         margin: 0;
         text-align: right; }
+        /* line 335, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .landing .content .text p:last-child a {
           color: #fff;
           text-decoration: none; }
+        /* line 339, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .landing .content .text p:last-child a:visited {
           color: #fff; }
+      /* line 343, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .landing .content .text p:last-child {
         font-family: "Oswald", sans-serif;
         color: #fff;
@@ -256,114 +311,149 @@ section {
         text-align: right;
         transition: background-color 1s;
         transition: font-size 1s; }
+        /* line 354, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .landing .content .text p:last-child a {
           color: #fff;
           text-decoration: none;
           transition: background-color 1s; }
+        /* line 359, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .landing .content .text p:last-child a:visited {
           color: #fff; }
+      /* line 363, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .landing .content .text #view:hover {
         background-color: #fff;
         font-size: 2.75rem; }
+        /* line 367, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .landing .content .text #view:hover a {
           color: #d41d1d; }
+    /* line 372, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .landing .content img {
       width: 45%; }
 
+/* line 380, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
 .sguide {
   flex-direction: column;
   justify-content: flex-start; }
+  /* line 383, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide h1 {
     font-family: "Oswald", sans-serif;
     color: #d41d1d;
     text-transform: uppercase; }
+  /* line 388, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide p {
     font-family: "Prompt", sans-serif;
     color: #2e2e2e;
     font-weight: 200; }
+  /* line 393, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide .filter {
     width: 90vw;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem 0; }
+    /* line 398, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .filter .filter-nav {
       margin-right: 1rem; }
+      /* line 400, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .filter .filter-nav h1 {
         margin: 0 .25rem .45rem 0; }
+      /* line 403, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .filter .filter-nav p {
         margin: .25rem 0 .25rem 0; }
+    /* line 407, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .filter .options {
       border-left: 1px solid #2e2e2e; }
+      /* line 409, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .filter .options .sal-options {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start; }
+        /* line 413, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .filter .options .sal-options h1 {
           margin: 0 0 .45rem 1rem; }
+        /* line 416, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .filter .options .sal-options .ranges {
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-start; }
+          /* line 420, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .filter .options .sal-options .ranges p {
             margin: .25rem 0 .25rem 1rem;
             text-align: left; }
+          /* line 424, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .filter .options .sal-options .ranges p:hover {
             color: #d41d1d;
             cursor: default; }
+      /* line 430, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .filter .options .dept-options {
         flex-direction: column;
         align-items: flex-start; }
+        /* line 433, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .filter .options .dept-options .deptandtitle-header {
           align-items: baseline; }
+          /* line 435, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .filter .options .dept-options .deptandtitle-header h1 {
             margin: 0 1rem 0 1rem; }
+          /* line 438, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .filter .options .dept-options .deptandtitle-header #dept-nav {
             margin: 0 0 0 0; }
+            /* line 440, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options .dept-options .deptandtitle-header #dept-nav a {
               font-size: 1.2rem;
               text-decoration: none;
               font-weight: 200;
               margin: 0;
               color: #d41d1d; }
+            /* line 447, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:hover {
               font-weight: 400;
               color: #d41d1d;
               cursor: default; }
+            /* line 452, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options .dept-options .deptandtitle-header #dept-nav a:visited {
               color: #d41d1d; }
+      /* line 458, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .filter .options #depts {
         flex-direction: column; }
+        /* line 460, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .filter .options #depts .list-containers {
           display: none;
           margin: 0; }
+          /* line 463, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .filter .options #depts .list-containers .dept-lists {
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             list-style: none; }
+            /* line 468, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options #depts .list-containers .dept-lists li {
               margin: .25rem;
               font-family: "Prompt", sans-serif;
               font-weight: 200; }
+            /* line 473, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options #depts .list-containers .dept-lists li:first-child {
               margin-top: 0; }
+            /* line 476, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .filter .options #depts .list-containers .dept-lists li:hover {
               color: #d41d1d;
               cursor: default; }
+  /* line 486, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide .table .table-nav {
     width: 90vw;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     margin: 1rem 0; }
+    /* line 492, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table .table-nav .title {
       align-items: flex-end;
       text-transform: uppercase;
       font-size: 1rem; }
+      /* line 496, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav .title h1 {
         color: #2e2e2e;
         margin: 0;
         font-family: "Oswald", sans-serif; }
+      /* line 501, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav .title a {
         color: #d41d1d;
         margin: 0 0 0 1rem;
@@ -371,15 +461,19 @@ section {
         font-family: "Prompt", sans-serif;
         font-size: 1.3rem;
         font-weight: 200; }
+      /* line 509, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav .title a:hover {
         font-weight: 400; }
+      /* line 512, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav .title a:visited {
         color: #d41d1d; }
+  /* line 517, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide .table table {
     border-collapse: collapse;
     width: 90vw;
     text-align: center;
     position: relative; }
+    /* line 522, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table th {
       background-color: #d41d1d;
       transition: background-color .5s;
@@ -387,289 +481,395 @@ section {
       font-family: "Oswald", sans-serif;
       font-size: 1.25rem;
       width: 30%; }
+    /* line 530, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table th:hover {
       background-color: #cc4040;
       cursor: default; }
+    /* line 534, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table th:last-child {
       margin-right: 1rem; }
+    /* line 537, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table .table-header {
       color: #fff;
       text-align: center;
       height: 5vh;
       text-transform: uppercase;
       width: 95vw; }
+    /* line 544, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table tr {
       border: none;
       height: 4em; }
+    /* line 548, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table tr:nth-child(odd) {
       background-color: #efefef;
       transition: background-color .3s; }
+    /* line 552, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table tr:nth-child(even) {
       background-color: #ece9e9;
       transition: background-color .3s; }
+    /* line 556, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table td {
       font-family: "Prompt", sans-serif;
       font-weight: 200;
       font-size: 1rem;
       margin: 0;
       padding: 0 .5rem; }
+    /* line 563, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table #tableRow {
       width: 10%; }
+    /* line 566, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table table tr:hover {
       background-color: #E0E0E0;
       cursor: default; }
+  /* line 571, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide .table .table-footer {
     flex-direction: row;
     margin-bottom: 1.5rem;
     justify-content: space-between; }
+    /* line 575, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table .table-footer .buttons {
       justify-content: space-between; }
+      /* line 577, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons button {
         background-color: #d41d1d;
         border-radius: 1.5rem;
         transition: background-color .5s;
         text-align: center; }
+      /* line 583, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons button:hover {
         background-color: #cc4040; }
+      /* line 586, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons #prev {
         margin: 0 .5rem 0 0;
         width: 10vw; }
+      /* line 590, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons #next {
         margin: 0 0 0 .5rem;
         width: 10vw; }
 
 @media (max-width: 1095px) {
+  /* line 605, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .text2 p {
     font-size: .87rem; }
+  /* line 609, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .close {
     font-size: .85rem; } }
+
 @media (max-width: 1030px) {
+  /* line 622, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .text2 p {
     font-size: .85rem; }
+  /* line 626, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .close {
     font-size: .82rem; }
-
+  /* line 635, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content .text p:first-child {
     font-size: 1.6rem; }
+  /* line 638, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content .text .title {
     font-size: 3.5rem; } }
+
 @media (max-width: 910px) {
+  /* line 649, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 62%;
     width: 72%; }
+    /* line 653, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .82rem; }
+    /* line 657, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .80rem; } }
+
 @media (max-width: 865px) {
+  /* line 671, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 62%;
     width: 75%; }
+    /* line 675, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .8rem; }
+    /* line 679, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .77rem; }
-
+  /* line 686, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content {
     background-image: url(../sources/umd-tp2.png);
     background-size: cover; }
+    /* line 690, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .landing .content .text p:first-child {
       font-size: 1.75rem; }
+    /* line 693, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .landing .content .text .title {
       font-size: 3.75rem; }
+    /* line 696, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .landing .content .text p:last-child {
       font-size: 2rem;
       padding: 0.3rem 0.2rem 0.3rem 0; }
+  /* line 702, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing img {
     display: none; }
-
+  /* line 706, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide {
     background-image: none;
     flex-direction: column;
     align-content: center;
     justify-content: center; }
+    /* line 711, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table {
       flex-direction: column;
       align-content: center;
       justify-content: center; }
+      /* line 715, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         width: 90vw; }
+        /* line 720, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-nav .title {
           justify-content: space-between; }
+          /* line 722, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .table-nav .title h1 {
             margin-left: 0;
             font-size: 1.5rem; }
+          /* line 726, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .table-nav .title #filter {
             margin-left: 2.2rem;
             text-align: right;
             font-size: 1rem; }
+        /* line 732, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-nav #search {
           width: 90vw;
           margin: .25rem 0 0 0; }
+      /* line 737, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .filter {
         width: 90vw; }
+        /* line 743, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options .sal-options .ranges div p {
           font-size: .8rem; }
+        /* line 750, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options .dept-options .deptandtitle-header {
           flex-direction: column; }
+          /* line 752, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav {
             margin: 0 0 0 1rem; }
+            /* line 754, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav a {
               font-size: 1rem; }
+        /* line 763, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options #depts .list-containers .dept-lists li {
           font-size: .85rem;
           margin-left: -1.5rem; }
+      /* line 774, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table table .table-header th {
         font-size: .8rem; }
+      /* line 779, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table table tr td {
         font-size: .8rem; }
+      /* line 784, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer {
         margin: .25rem 0; }
+        /* line 787, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-footer .buttons button {
           font-size: .77rem;
           padding: .75rem 1.25rem; }
+        /* line 792, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-footer p {
           font-size: .7rem; } }
+
 @media (max-width: 765px) {
+  /* line 803, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     width: 80%; }
+    /* line 806, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .77rem; }
+    /* line 810, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .75rem; } }
+
 @media (max-width: 690px) {
+  /* line 823, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .text2 p {
     font-size: .77rem; }
+  /* line 827, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .close {
     font-size: .75rem; } }
+
 @media (max-width: 610px) {
+  /* line 838, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 65%;
     width: 82%; }
+    /* line 842, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .75rem; }
+    /* line 846, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .72rem; } }
+
 @media (max-width: 575px) {
+  /* line 859, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content #prev-text .text2 h1 {
     font-size: 1.5rem; }
+  /* line 864, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 67%;
     width: 85%; }
+    /* line 868, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .75rem; }
+    /* line 872, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .72rem; }
-
+  /* line 881, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content .text p:first-child {
     font-size: 1.4rem; }
+  /* line 884, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content .text .title {
     font-size: 3rem; }
+  /* line 887, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing .content .text p:last-child {
     font-size: 1.75rem;
     padding: 0.3rem 0.2rem 0.3rem 0; }
+  /* line 893, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .landing img {
     display: none; }
-
+  /* line 897, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide {
     flex-direction: column;
     align-content: center;
     justify-content: center; }
+    /* line 901, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .sguide .table {
       flex-direction: column;
       align-content: center;
       justify-content: center; }
+      /* line 905, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-nav {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         width: 90vw; }
+        /* line 910, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-nav .title {
           justify-content: space-between; }
+          /* line 912, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .table-nav .title h1 {
             margin-left: 0;
             font-size: 1.5rem; }
+          /* line 916, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .table-nav .title #filter {
             margin-left: 2.2rem;
             text-align: right;
             font-size: 1rem; }
+        /* line 922, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .table-nav #search {
           width: 90vw;
           margin: .25rem 0 0 0; }
+      /* line 927, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .filter {
         width: 90vw; }
+        /* line 933, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options .sal-options .ranges div p {
           font-size: .8rem; }
+        /* line 940, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options .dept-options .deptandtitle-header {
           flex-direction: column; }
+          /* line 942, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
           .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav {
             margin: 0 0 0 1rem; }
+            /* line 944, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
             .sguide .table .filter .options .dept-options .deptandtitle-header #dept-nav a {
               font-size: 1rem; }
+        /* line 953, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
         .sguide .table .filter .options #depts .list-containers .dept-lists li {
           font-size: .85rem;
           margin-left: -1.5rem; }
+      /* line 964, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table table .table-header th {
         font-size: .6rem; }
+      /* line 969, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table table tr td {
         font-size: .65rem; }
+      /* line 976, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons button {
         font-size: .65rem;
         text-align: center;
         padding: .25rem 1rem; }
+      /* line 981, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons #prev {
         margin-right: .25rem; }
+      /* line 984, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer .buttons #next {
         margin-left: .25rem; }
+      /* line 988, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
       .sguide .table .table-footer p {
         font-size: .7rem; } }
+
 @media (max-width: 530px) {
+  /* line 998, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   header p {
     font-size: 1.5rem; }
+  /* line 1002, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   header nav a {
     font-size: .9rem; }
-
+  /* line 1009, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   footer .social-links a {
     font-size: 1.35rem; }
-
+  /* line 1016, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content #prev-text {
     height: 35%;
     padding: 1.75rem 1.5rem; }
+    /* line 1020, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content #prev-text .text2 h1 {
       font-size: 1.25rem; }
+    /* line 1024, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content #prev-text .text2 .links a {
       font-size: .8rem; }
+  /* line 1030, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     width: 87%;
     padding: 1rem 1.75rem; }
+    /* line 1035, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 h1 {
       font-size: 1.5rem; }
+    /* line 1038, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .72rem; }
+    /* line 1042, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .70rem; } }
+
 @media (max-width: 430px) {
+  /* line 1055, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .text2 p {
     font-size: .65rem; }
+  /* line 1059, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text .close {
     font-size: .62rem; }
-
+  /* line 1068, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .sguide .table table tr {
     height: 2em; } }
+
 @media (max-width: 375px) {
+  /* line 1079, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 77%; } }
+
 @media (max-width: 320px) {
+  /* line 1089, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
   .modal .modal-content .text {
     height: 75%;
     width: 95%; }
+    /* line 1093, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 h1 {
       font-size: 1.2rem; }
+    /* line 1096, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .text2 p {
       font-size: .57rem; }
+    /* line 1100, /Applications/XAMPP/xamppfiles/htdocs/DBK/SalaryGuide/css/main.scss */
     .modal .modal-content .text .close {
       font-size: .55rem; } }
 
