@@ -301,76 +301,82 @@ section {
 .landing {
     flex-direction: column;
     .content {
-        flex-direction: row;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
-        .text {
-            margin: 0 1rem;
-            p:first-child {
-                font-family: $prompt;
-                font-weight: 300;
-                color: $red;
-                font-size: 2.5rem;
-                text-align: left;
-                text-transform: uppercase;
-                margin: 0;
-            }
-            .title {
-                font-family: $oswald;
-                color: $black;
-                text-align: left;
-                font-size: 5.5rem;
-                margin: 0 0 0.5rem 0;
-                text-transform: uppercase;
-            }
-            p:last-child {
-                font-family: $oswald;
-                color: $white;
-                background-color: $red;
-                font-size: 2.5rem;
-                padding: 0.5rem 0.25rem 0.5rem 0;
-                margin: 0;
-                text-align: right;
-                a {
-                    color: $white;
-                    text-decoration: none;
-                }
-                a:visited {
-                    color: $white;
-                }
-            }
-            p:last-child {
-                font-family: $oswald;
-                color: $white;
-                background-color: $red;
-                font-size: 2.5rem;
-                padding: 0.5rem 0.75rem 0.5rem 0;
-                margin: 0;
-                text-align: right;
-                transition: background-color 1s;
-                transition: font-size 1s;
-                //transition: text-transform 1s;
-                a {
-                    color: $white;
-                    text-decoration: none;
-                    transition: background-color 1s;
-                }
-                a:visited {
-                    color: $white;
-                }
-            }
-            #view:hover {
-                background-color: $white;
-                font-size: 2.75rem;
-                //text-transform: uppercase;
-                a {
+        flex-direction: column;
+        .content2 {
+            flex-direction: row;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            margin: 0;
+            .text {
+                margin: 0 1rem;
+                p:first-child {
+                    font-family: $prompt;
+                    font-weight: 300;
                     color: $red;
+                    font-size: 2.5rem;
+                    text-align: left;
+                    text-transform: uppercase;
+                    margin: 0;
                 }
+                .title {
+                    font-family: $oswald;
+                    color: $black;
+                    text-align: left;
+                    font-size: 5.5rem;
+                    margin: 0 0 0.5rem 0;
+                    text-transform: uppercase;
+                }
+                p:last-child {
+                    font-family: $oswald;
+                    color: $white;
+                    background-color: $red;
+                    font-size: 2.5rem;
+                    padding: 0.5rem 0.25rem 0.5rem 0;
+                    margin: 0;
+                    text-align: right;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                    a:visited {
+                        color: $white;
+                    }
+                }
+                p:last-child {
+                    font-family: $oswald;
+                    color: $white;
+                    background-color: $red;
+                    font-size: 2.5rem;
+                    padding: 0.5rem 0.75rem 0.5rem 0;
+                    margin: 0;
+                    text-align: right;
+                    transition: background-color 1s;
+                    transition: font-size 1s;
+                    a {
+                        color: $white;
+                        text-decoration: none;
+                        transition: background-color 1s;
+                    }
+                    a:visited {
+                        color: $white;
+                    }
+                }
+                #view:hover {
+                    background-color: $white;
+                    font-size: 2.75rem;
+                    a {
+                        color: $red;
+                    }
+                }
+            }
+            img {
+                width: 45%;
             }
         }
-        img {
-            width: 45%;
+        .share {
+            padding: 0;
+            margin: -10% 0;
         }
     }
 }
