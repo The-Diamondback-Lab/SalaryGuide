@@ -203,13 +203,15 @@ section {
     border-bottom: thin solid $grey;
     margin: 0;
     padding: .75rem 0;
-    h1 {
-        color: $red;
-        margin: 0;
-    }
-    p {
-        font-family: $prompt;
-        font-size: .9rem;
+    .text {
+        h1 {
+            color: $red;
+            margin: 0;
+        }
+        p {
+            font-family: $prompt;
+            font-size: .9rem;
+        }
     }
 }
 
@@ -637,12 +639,14 @@ section {
     }
     .landing {
         .content {
-            .text {
-                p:first-child {
-                    font-size: 1.6rem;
-                }
-                .title {
-                    font-size: 3.5rem;
+            .content2 {
+                .text {
+                    p:first-child {
+                        font-size: 1.6rem;
+                    }
+                    .title {
+                        font-size: 3.5rem;
+                    }
                 }
             }
         }
@@ -692,21 +696,23 @@ section {
         .content {
             background-image: url(../sources/umd-tp2.png);
             background-size: cover;
-            .text {
-                p:first-child {
-                    font-size: 1.75rem;
+            .content2 {
+                .text {
+                    p:first-child {
+                        font-size: 1.75rem;
+                    }
+                    .title {
+                        font-size: 3.75rem;
+                    }
+                    p:last-child {
+                        font-size: 2rem;
+                        padding: 0.3rem 0.2rem 0.3rem 0;
+                    }
                 }
-                .title {
-                    font-size: 3.75rem;
-                }
-                p:last-child {
-                    font-size: 2rem;
-                    padding: 0.3rem 0.2rem 0.3rem 0;
+                img {
+                    display: none;
                 }
             }
-        }
-        img {
-            display: none;
         }
     }
     .sguide {
@@ -883,21 +889,23 @@ section {
     }
     .landing {
         .content {
-            .text {
-                p:first-child {
-                    font-size: 1.4rem;
+            .content2 {
+                .text {
+                    p:first-child {
+                        font-size: 1.4rem;
+                    }
+                    .title {
+                        font-size: 3rem;
+                    }
+                    p:last-child {
+                        font-size: 1.75rem;
+                        padding: 0.3rem 0.2rem 0.3rem 0;
+                    }
                 }
-                .title {
-                    font-size: 3rem;
-                }
-                p:last-child {
-                    font-size: 1.75rem;
-                    padding: 0.3rem 0.2rem 0.3rem 0;
+                img {
+                    display: none;
                 }
             }
-        }
-        img {
-            display: none;
         }
     }
     .sguide {

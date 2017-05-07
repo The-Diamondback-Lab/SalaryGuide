@@ -17,6 +17,7 @@ $(document).ready(function () {
         if ($('#allGuides').css('display') == 'block') {
             $('#allGuides').toggleClass('toggleDisplay');
         }
+        $('.text').slideDown();
     });
 
     $('#previous').click(function () {
@@ -25,6 +26,7 @@ $(document).ready(function () {
         if ($('#about-section').css('display') == 'block') {
             $('#about-section').toggleClass('toggleDisplay');
         }
+        $('.text').slideDown();
     });
     //    $(window).resize(function () {
     //        if (window.matchMedia("(max-width: 865px)").matches) {
