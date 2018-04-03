@@ -53,16 +53,6 @@ myApp.config(function($locationProvider,$stateProvider,$urlRouterProvider){
             templateUrl:"templates/landing.html",
             controller:"homeCtlr"
         })
-        .state('2017',{
-            url:"/2017",
-            templateUrl:"templates/2017.html",
-            controller:"2017Ctlr"
-        })
-        .state('table',{
-            url:"/table",
-            templateUrl:"templates/table.html",
-            controller:"testCtlr"
-        })
         // Actual
         .state('salGuide',{
             url:"/salGuide?year",
@@ -90,7 +80,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     // NOTE #1 for values: 0 - not being sorted by that row, 1 - sorted ascending by that row, 2 - sorting descending by that row
     // NOTE #2 for indices: 0 - employee/name, 1 - department, 2 - title, 3 - salary
     $scope.sortRowArray = [1,0,0,0];
-    
+
     $scope.sortRowObj = {
         "Employee":0,
         "Department":0,
@@ -98,7 +88,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         "Salary":0
     };
     if ($stateParams.year == null){
-      $stateParams.year = 2017;
+      $stateParams.year = 2018;
     }
     $scope.year = $stateParams.year;
     tableService.getTable($stateParams.year).then(function(data) {
@@ -157,15 +147,15 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
         sortData();
     }
     $scope.sortRows = function(sortByVal) {
-        
-        
+
+
         if(sortByVal == "Employee") {
             $scope.sortRowArray.fill(0,1,4)
             if($scope.sortRowArray[0] != 1) {
-                
+
                 $scope.sortRowArray[0] = 1;
             } else {
-                
+
                 $scope.sortRowArray[0] = 2;
             }
         }
@@ -176,8 +166,8 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             if($scope.sortRowArray[2] != 1){
                 $scope.sortRowArray[2] = 1
             } else {
-                
-                
+
+
                 $scope.sortRowArray[2] = 2;
             }
         }
@@ -187,17 +177,17 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             if($scope.sortRowArray[1] != 1) {
                 $scope.sortRowArray[1] = 1
             } else {
-                
+
                 $scope.sortRowArray[1] = 2;
             }
-            
-        } 
+
+        }
         if(sortByVal == "Salary") {
             $scope.sortRowArray.fill(0,0,3);
             if($scope.sortRowArray[3] != 1) {
                 $scope.sortRowArray[3] = 1;
             } else {
-                
+
                 $scope.sortRowArray[3] = 2;
             }
         }
@@ -221,7 +211,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             return;
         }
         name = namesArray[sortIndex];
-        
+
         if(name == "Salary") {
             curr_data = _.sortBy(curr_data, function(elt){
                 curr_salary = elt.Salary.replace(/[\$,]/g,'');
@@ -232,11 +222,11 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
                 return elt[name].toLowerCase();
             });
         }
-        
+
         curr_data = sortVal == 2 ? curr_data.reverse() : curr_data;
         resetTable();
     }
-    
+
     function resetTable() {
         $scope.page_count = 1;
         $scope.max_pages = Math.ceil(curr_data.length / 10);
@@ -245,9 +235,9 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
     window.onkeydown = function(e) {
         var event = window.event ? window.event : e;
         var target = event.target || event.srcElement;
-        
+
         if (target.nodeName != 'INPUT') {
-            
+
             // Pressing left
             if (event.keyCode == 37) {
                 console.log("left")
@@ -260,7 +250,7 @@ myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",f
             }
         }
     }
-    
+
 }]);
 
 /*myApp.controller("2017Ctlr",["$scope","$http","CSVtoJSON","_",function($scope,$http,CSVtoJSON,_) {
