@@ -14,6 +14,9 @@ $(document).ready(function () {
         $('#previous').css('font-weight', 200);
         $('#prev-modal').css('display', 'none');
         $('#filter-modal').css('display', 'none');
+        if ($('#allGuides').css('display') == 'block') {
+            $('#allGuides').toggleClass('toggleDisplay');
+        }
     });
 
     $('#previous').click(function () {
