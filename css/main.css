@@ -389,7 +389,6 @@ section {
         color: #d41d1d; }
   .sguide .table table {
     border-collapse: collapse;
-    width: 90vw;
     text-align: center;
     position: relative; }
     .sguide .table table th {
