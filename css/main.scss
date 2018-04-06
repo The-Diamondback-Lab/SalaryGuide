@@ -385,6 +385,11 @@ section {
 
 //end landing page styles
 //begin salary guide page styles
+
+.bannerad {
+  width: 30%;
+}
+
 .sguide {
     flex-direction: column;
     justify-content: flex-start;
@@ -1058,6 +1063,10 @@ section {
                 }
             }
         }
+    }
+
+    .bannerad {
+      width: 80%;
     }
 }
 
