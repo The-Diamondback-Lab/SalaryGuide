@@ -593,7 +593,8 @@ section {
     .sguide .table {
       flex-direction: column;
       align-content: center;
-      justify-content: center; }
+      justify-content: center;
+      width: 100vw; }
       .sguide .table .table-nav {
         flex-direction: column;
         align-items: flex-start;
