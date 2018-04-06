@@ -36,8 +36,10 @@
                 <input type="text" ng-model="search_term" ng-change="search_data()" type="search" placeholder="SEARCH" id="search">
             </div>
 
-            <a href = "http://go.umd.edu/seniors" target = "_blank"><img class = "bannerad" src = "sources/ad1.gif" /></a>
-            <a href = "http://www.terrapinrow.com" target = "_blank"><img class = "bannerad" src = "sources/ad2.gif"  /></a>
+            <div style = "text-align: center">
+              <a href = "http://go.umd.edu/seniors" target = "_blank" ><img style = "display:inline-block;" class = "bannerad" src = "sources/ad1.gif" /></a>
+              <a href = "http://www.terrapinrow.com" target = "_blank" ><img style = "display:inline-block;" class = "bannerad" src = "sources/ad2.gif"  /></a>
+            </div>
 
             <div ng-if="dataLoading" class="center-page"><img src="sources/loading.gif" /></div>
 
