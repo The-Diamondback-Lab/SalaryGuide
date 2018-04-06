@@ -389,6 +389,7 @@ section {
         color: #d41d1d; }
   .sguide .table table {
     border-collapse: collapse;
+    width: 90vw;
     text-align: center;
     position: relative; }
     .sguide .table table th {
@@ -592,8 +593,7 @@ section {
     .sguide .table {
       flex-direction: column;
       align-content: center;
-      justify-content: center;
-      width: 100vw; }
+      justify-content: center; }
       .sguide .table .table-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -624,10 +624,12 @@ section {
         .sguide .table .filter .options #depts .list-containers .dept-lists li {
           font-size: .85rem;
           margin-left: -1.5rem; }
-      .sguide .table table .table-header th {
-        font-size: .6rem; }
-      .sguide .table table tr td {
-        font-size: .65rem; }
+      .sguide .table table {
+        width: 100vw; }
+        .sguide .table table .table-header th {
+          font-size: .6rem; }
+        .sguide .table table tr td {
+          font-size: .65rem; }
       .sguide .table .table-footer .buttons button {
         font-size: .65rem;
         text-align: center;
