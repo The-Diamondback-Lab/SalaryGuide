@@ -279,9 +279,6 @@ section {
       padding: 0;
       margin: -10% 0; }
 
-.bannerad {
-  width: 30%; }
-
 .sguide {
   flex-direction: column;
   justify-content: flex-start; }

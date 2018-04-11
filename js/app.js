@@ -67,6 +67,27 @@ myApp.controller("homeCtlr",["$scope",function($scope) {
 
 myApp.controller("salGuideCtlr",["$scope", '$stateParams', "tableService", "_",function($scope, $stateParams, tableService,_) {
 
+    $scope.ads = [
+      {
+        "link": "http://www.terrapinrow.com",
+        "image": "sources/ad2.gif"
+      },
+      {
+        "link": "http://go.umd.edu/seniors",
+        "image": "sources/ad1.gif"
+      }
+    ];
+
+    console.log($scope.ads);
+
+    var rand = Math.random();
+    if (rand < 0.5) {
+      var ad1 = $scope.ads[0];
+      $scope.ads[0] = $scope.ads[1];
+      $scope.ads[1] = ad1;
+    }
+
+
     $scope.dataLoading = true;
 
     $scope.page_count = 1;
